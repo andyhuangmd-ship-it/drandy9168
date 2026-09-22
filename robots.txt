@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andyhuangmd-ship-it.github.io/uro-health/sitemap.xml
