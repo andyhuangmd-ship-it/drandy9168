@@ -160,7 +160,7 @@
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
 body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
@@ -227,11 +227,51 @@ a{color:#374561;text-decoration:none}
  .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
  .page_body{padding-top:70px}.post,.comments{padding:16px}
  .post-body{margin-top:24px}}
+
+/* ===== 亮色精品版型（老闆 2026-09-25：全站太深改亮；參考 drpjchiang 的設計語言，不照抄版面）=====
+   米白卡 #fffdf8／奶油底 #f3ece0／深藍 #1f3556／深金 #8a6a1f（小字）／金 #b08d3c（裝飾線） */
+body{background:#f3ece0;color:#1f2937}
+.bg-photo-container{display:none}
+.topbar{background:#fffdf8;border-bottom:1px solid #e7dcc9;box-shadow:0 1px 8px rgba(31,53,86,.06)}
+.topbar-in{max-width:1100px;gap:10px 22px;padding:10px 24px;flex-wrap:wrap}
+.topbar .return svg{fill:#1f3556}
+.brand{display:flex;flex-direction:column;margin:0;white-space:normal;overflow:visible;color:#1f3556!important}
+.brand-name{font:900 26px "Noto Serif TC",serif;letter-spacing:1px;color:#1f3556;line-height:1.3}
+.brand-sub{margin-top:2px;font:700 12px Lato,sans-serif;letter-spacing:3px;color:#8a6a1f}
+.nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-left:auto}
+.nav a{color:#1f2937!important;font:500 15px Lato,sans-serif;padding:6px 0}
+.nav a:hover{color:#8a6a1f!important}
+.nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:8px;
+ background:#1f3556;color:#fff!important;font:700 15px Lato,sans-serif}
+.page_body{padding:28px 0 2em}
+.card{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.post-title{color:#1f3556;font-family:"Noto Serif TC",serif}
+.byline{color:#6b7280}
+.post-body{color:#1f2937}
+.post-body a,.comments a{color:#7a4f12;text-decoration:underline}
+.post-body th,.post-body td{border-color:#e7dcc9}
+.post-body blockquote{color:#374151}
+.back{background:#1f3556;border-radius:8px}
+.comments{border-top:1px solid #e7dcc9;color:#1f2937}
+.comments .title{color:#1f3556}
+.comment{border-bottom-color:#eee3d2}
+.comment .when,.comment-empty,.comment-form .note{color:#6b7280}
+.comment .replies{border-left-color:#b08d3c}
+.comment .who .owner{background:#1f3556}
+.comment-form input,.comment-form textarea{border:1px solid #d9cdb8;border-radius:6px}
+.comment-form button{background:#1f3556;border-radius:8px}
+.tile{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.tile-title{color:#1f3556}
+.tile .views{color:#8a6a1f}
+@media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+ .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
 </style>
 </head>
 <body class="item" data-slug="anticoagulant-surgery">
-<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
-<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="/"><span class="brand-name">黃建榮醫師</span><span class="brand-sub">泌尿科衛教・臺北醫學大學附設醫院</span></a>
+<nav class="nav" aria-label="手術主題"><a href="/laser/">雷射攝護腺剜除</a><a href="/davinci/">達文西手術</a><a href="/rirs/">RIRS 腎結石</a><a href="/#visit">看診資訊</a></nav>
+<a class="nav-cta" href="https://www.tmuh.org.tw/service/regist/08/080013" rel="noopener" target="_blank">北醫掛號</a></div></header>
 <div class="page_body">
 <main class="card">
 <div class="post">
@@ -242,12 +282,12 @@ a{color:#374561;text-decoration:none}
 <div style="background: rgb(255, 255, 255); color: #222222; font-family: &quot;Noto Sans TC&quot;, -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.8; max-width: 100%;">
 
 <!--HERO-->
-<div style="background: linear-gradient(135deg, rgb(0, 105, 92) 0%, rgb(0, 137, 123) 50%, rgb(38, 166, 154) 100%); border-radius: 24px; margin-bottom: 32px; overflow: hidden; padding: 48px 28px; position: relative; text-align: center;color:#ffffff">
-  <div style="background: radial-gradient(circle, rgba(178, 223, 219, 0.4) 0%, rgba(178, 223, 219, 0) 70%); border-radius: 50%; height: 200px; position: absolute; right: -60px; top: -60px; width: 200px;color:#1c1c1e"></div>
-  <div style="background: radial-gradient(circle, rgba(178, 223, 219, 0.3) 0%, rgba(178, 223, 219, 0) 70%); border-radius: 50%; bottom: -80px; height: 220px; left: -40px; position: absolute; width: 220px;color:#1c1c1e"></div>
+<div style="background: linear-gradient(135deg, rgb(0, 105, 92) 0%, rgb(0, 137, 123) 50%, rgb(38, 166, 154) 100%); border-radius: 24px; margin-bottom: 32px; overflow: hidden; padding: 48px 28px; position: relative; text-align: center;color:#1c1c1e">
+  <div style="background: radial-gradient(circle, rgba(178, 223, 219, 0.4) 0%, rgba(178, 223, 219, 0) 70%); border-radius: 50%; height: 200px; position: absolute; right: -60px; top: -60px; width: 200px;"></div>
+  <div style="background: radial-gradient(circle, rgba(178, 223, 219, 0.3) 0%, rgba(178, 223, 219, 0) 70%); border-radius: 50%; bottom: -80px; height: 220px; left: -40px; position: absolute; width: 220px;"></div>
   <div style="position: relative; z-index: 1;">
     <span style="background: rgba(255, 255, 255, 0.2); border-radius: 999px; border: 1px solid rgb(178, 223, 219); color:#161818; display: inline-block; font-size: 13px; letter-spacing: 1px; margin-bottom: 18px; padding: 6px 18px;">手術安全 &#10022; 用藥須知</span>
-    <h1 style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 224, 178) 50%, rgb(255, 209, 128) 100%) text; font-size: clamp(24px,5vw,36px); font-weight: 800; line-height: 1.4; margin: 0px 0px 14px;color:#1c1c1e">吃抗凝血劑&#12289;阿斯匹靈&#65292;<br />要停藥幾天才能做攝護腺手術&#65311;</h1><div class="geo-sum-20260908" style="background: rgb(242, 249, 248); border-left: 4px solid rgb(47, 168, 160); border-radius: 10px; margin: 0px 0px 22px; padding: 14px 18px;color:#1c1c1e"><p style="color: #1f6f6a; font-size: 0.9em; font-weight: 700; margin: 0px 0px 6px;"><span style="color: #222222;">攝護腺手術前抗凝血藥停藥天數依藥物而異&#65306;阿斯匹靈約 5&#8211;7 天&#12289;抗血小板藥約 5 天&#12289;新型口服抗凝血劑約 2&#8211;3 天&#65307;務必由開藥醫師與手術醫師共同評估&#65292;切勿自行停藥&#12290;</span></p></div>
+    <h1 style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 224, 178) 50%, rgb(255, 209, 128) 100%) text; font-size: clamp(24px,5vw,36px); font-weight: 800; line-height: 1.4; margin: 0px 0px 14px;">吃抗凝血劑&#12289;阿斯匹靈&#65292;<br />要停藥幾天才能做攝護腺手術&#65311;</h1><div class="geo-sum-20260908" style="background: rgb(242, 249, 248); border-left: 4px solid rgb(47, 168, 160); border-radius: 10px; margin: 0px 0px 22px; padding: 14px 18px;"><p style="color: #1f6f6a; font-size: 0.9em; font-weight: 700; margin: 0px 0px 6px;"><span style="color: #222222;">攝護腺手術前抗凝血藥停藥天數依藥物而異&#65306;阿斯匹靈約 5&#8211;7 天&#12289;抗血小板藥約 5 天&#12289;新型口服抗凝血劑約 2&#8211;3 天&#65307;務必由開藥醫師與手術醫師共同評估&#65292;切勿自行停藥&#12290;</span></p></div>
     <p style="color: #e0f2f1; font-size: 15px; margin: 0px auto; max-width: 600px;">北醫泌尿科黃建榮醫師完整解析心血管用藥病人的攝護腺雷射手術評估與停藥原則</p>
   </div>
 </div>
@@ -324,7 +364,7 @@ a{color:#374561;text-decoration:none}
 </div>
 
 <!--CTA-->
-<div style="background: linear-gradient(135deg, rgb(0, 105, 92), rgb(0, 137, 123)); border-radius: 20px; margin-top: 36px; padding: 32px 24px; text-align: center;color:#ffffff">
+<div style="background: linear-gradient(135deg, rgb(0, 105, 92), rgb(0, 137, 123)); border-radius: 20px; margin-top: 36px; padding: 32px 24px; text-align: center;color:#1c1c1e">
   <p style="color: #e0f2f1; font-size: 18px; font-weight: 700; margin: 0px 0px 8px;">正在服用抗凝血劑或阿斯匹靈&#65311;</p>
   <p style="color: #c7ebe6; font-size: 14px; margin: 0px 0px 20px;">歡迎預約黃建榮醫師門診&#65292;帶著您目前的用藥清單&#65292;一起評估最安全的手術規劃&#12290;</p>
   <div style="-webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
@@ -335,7 +375,7 @@ a{color:#374561;text-decoration:none}
 
 <!--醫師署名-->
 <div style="-webkit-display: flex; -webkit-flex-wrap: wrap; align-items: center; background: rgb(232, 245, 243); border-radius: 16px; display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; padding: 20px;">
-  <div style="-webkit-flex-shrink: 0; background: rgb(0, 105, 92); border-radius: 50%; flex-shrink: 0; height: 64px; width: 64px;color:#ffffff"></div>
+  <div style="-webkit-flex-shrink: 0; background: rgb(0, 105, 92); border-radius: 50%; flex-shrink: 0; height: 64px; width: 64px;color:#1c1c1e"></div>
   <div>
     <p style="color: #00695c; font-weight: 700; margin: 0px 0px 4px;">黃建榮 醫師&#65372;臺北醫學大學附設醫院 泌尿科</p>
     <p style="color: #555555; font-size: 13px; margin: 0px;">專長&#65306;高階攝護腺雷射手術&#65288;HoLEP&#65295;ThuLEP&#65289;&#12539;大體積攝護腺剜除術&#12539;RIRS軟式輸尿管鏡取石&#12539;HIFU攝護腺癌治療&#12539;達文西機械手臂泌尿外科手術&#12539;1,500例以上手術實績&#12539;商業周刊百大良醫&#12290;曾赴美國哈佛大學Brigham and Women's Hospital進修達文西機器人手術&#12290;</p>
@@ -348,7 +388,7 @@ a{color:#374561;text-decoration:none}
 </div>
 
 </div>
-<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color:#c0c5ca; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color: #1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>

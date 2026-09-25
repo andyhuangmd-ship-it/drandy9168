@@ -256,7 +256,7 @@
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
 body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
@@ -323,18 +323,58 @@ a{color:#374561;text-decoration:none}
  .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
  .page_body{padding-top:70px}.post,.comments{padding:16px}
  .post-body{margin-top:24px}}
+
+/* ===== 亮色精品版型（老闆 2026-09-25：全站太深改亮；參考 drpjchiang 的設計語言，不照抄版面）=====
+   米白卡 #fffdf8／奶油底 #f3ece0／深藍 #1f3556／深金 #8a6a1f（小字）／金 #b08d3c（裝飾線） */
+body{background:#f3ece0;color:#1f2937}
+.bg-photo-container{display:none}
+.topbar{background:#fffdf8;border-bottom:1px solid #e7dcc9;box-shadow:0 1px 8px rgba(31,53,86,.06)}
+.topbar-in{max-width:1100px;gap:10px 22px;padding:10px 24px;flex-wrap:wrap}
+.topbar .return svg{fill:#1f3556}
+.brand{display:flex;flex-direction:column;margin:0;white-space:normal;overflow:visible;color:#1f3556!important}
+.brand-name{font:900 26px "Noto Serif TC",serif;letter-spacing:1px;color:#1f3556;line-height:1.3}
+.brand-sub{margin-top:2px;font:700 12px Lato,sans-serif;letter-spacing:3px;color:#8a6a1f}
+.nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-left:auto}
+.nav a{color:#1f2937!important;font:500 15px Lato,sans-serif;padding:6px 0}
+.nav a:hover{color:#8a6a1f!important}
+.nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:8px;
+ background:#1f3556;color:#fff!important;font:700 15px Lato,sans-serif}
+.page_body{padding:28px 0 2em}
+.card{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.post-title{color:#1f3556;font-family:"Noto Serif TC",serif}
+.byline{color:#6b7280}
+.post-body{color:#1f2937}
+.post-body a,.comments a{color:#7a4f12;text-decoration:underline}
+.post-body th,.post-body td{border-color:#e7dcc9}
+.post-body blockquote{color:#374151}
+.back{background:#1f3556;border-radius:8px}
+.comments{border-top:1px solid #e7dcc9;color:#1f2937}
+.comments .title{color:#1f3556}
+.comment{border-bottom-color:#eee3d2}
+.comment .when,.comment-empty,.comment-form .note{color:#6b7280}
+.comment .replies{border-left-color:#b08d3c}
+.comment .who .owner{background:#1f3556}
+.comment-form input,.comment-form textarea{border:1px solid #d9cdb8;border-radius:6px}
+.comment-form button{background:#1f3556;border-radius:8px}
+.tile{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.tile-title{color:#1f3556}
+.tile .views{color:#8a6a1f}
+@media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+ .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
 </style>
 </head>
 <body class="item" data-slug="bph-medication">
-<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
-<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="/"><span class="brand-name">黃建榮醫師</span><span class="brand-sub">泌尿科衛教・臺北醫學大學附設醫院</span></a>
+<nav class="nav" aria-label="手術主題"><a href="/laser/">雷射攝護腺剜除</a><a href="/davinci/">達文西手術</a><a href="/rirs/">RIRS 腎結石</a><a href="/#visit">看診資訊</a></nav>
+<a class="nav-cta" href="https://www.tmuh.org.tw/service/regist/08/080013" rel="noopener" target="_blank">北醫掛號</a></div></header>
 <div class="page_body">
 <main class="card">
 <div class="post">
 <h1 class="post-title">💊 攝護腺肥大藥物要吃一輩子嗎&#65311;泌尿科醫師完整解析</h1>
 <div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="bph-medication" hidden></span></div>
 <article class="post-body">
-<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;color:#1c1c1e"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;color:#1c1c1e">
+<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;">
 
 <span style="color: #222222;"><!--AI Generative Summary--></span>
 <div style="background: rgb(232, 234, 246); border-left: 5px solid rgb(57, 73, 171); border-radius: 0px 10px 10px 0px; color: #222222; font-size: 16px; margin-bottom: 28px; padding: 16px 20px;">
@@ -347,7 +387,7 @@ a{color:#374561;text-decoration:none}
 <div style="color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 14px; margin-bottom: 28px;">
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">活路利淨</div>
       <div style="color: #c5cae9; font-size: 13px;">Alfuzosin / Uroxatral</div>
@@ -364,7 +404,7 @@ a{color:#374561;text-decoration:none}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">暢利淨/優列扶</div>
       <div style="color: #c5cae9; font-size: 13px;">Tamsulosin / Harnalidge / Flomax</div>
@@ -381,7 +421,7 @@ a{color:#374561;text-decoration:none}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">適尿通/多適達</div>
       <div style="color: #bbdefb; font-size: 13px;">Finasteride / Proscar / Dutasteride</div>
@@ -404,7 +444,7 @@ a{color:#374561;text-decoration:none}
   <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑&#65288;活路利淨&#12289;暢利淨&#65289;還是 5α 還原酶抑制劑&#65288;適尿通&#65289;&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"> 表一&#65306;活路利淨 vs. 暢利淨 vs. 適尿通 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
@@ -567,7 +607,7 @@ a{color:#374561;text-decoration:none}
 </div>
 
 <span style="color: #222222;"><!--FAQ--></span>
-<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">&#10067; 常見問題 FAQ</h2>
 
@@ -674,7 +714,7 @@ a{color:#374561;text-decoration:none}
 <div style="-webkit-flex-wrap: wrap; color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 14px; margin-bottom: 28px;">
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;非選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Doxazosin</div>
     </div>
@@ -690,7 +730,7 @@ a{color:#374561;text-decoration:none}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;攝護腺選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Tamsulosin / Silodosin</div>
     </div>
@@ -706,7 +746,7 @@ a{color:#374561;text-decoration:none}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#ffffff">
+    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#1c1c1e">
       <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Finasteride / Dutasteride</div>
     </div>
@@ -728,7 +768,7 @@ a{color:#374561;text-decoration:none}
   <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑還是 5α 還原酶抑制劑&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">📊 表一&#65306;非選擇性 α 阻斷劑 vs. 選擇性 α 阻斷劑 vs. 5α 還原酶抑制劑 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
@@ -884,7 +924,7 @@ a{color:#374561;text-decoration:none}
   </div>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">&#10067; 常見問題 FAQ</h2>
 
@@ -961,7 +1001,7 @@ a{color:#374561;text-decoration:none}
 </div>
 
 </div>
-<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#c0c5ca;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#c0c5ca;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#c0c5ca;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>

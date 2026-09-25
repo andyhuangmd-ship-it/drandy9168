@@ -200,7 +200,7 @@
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
 body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
@@ -267,11 +267,51 @@ a{color:#374561;text-decoration:none}
  .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
  .page_body{padding-top:70px}.post,.comments{padding:16px}
  .post-body{margin-top:24px}}
+
+/* ===== 亮色精品版型（老闆 2026-09-25：全站太深改亮；參考 drpjchiang 的設計語言，不照抄版面）=====
+   米白卡 #fffdf8／奶油底 #f3ece0／深藍 #1f3556／深金 #8a6a1f（小字）／金 #b08d3c（裝飾線） */
+body{background:#f3ece0;color:#1f2937}
+.bg-photo-container{display:none}
+.topbar{background:#fffdf8;border-bottom:1px solid #e7dcc9;box-shadow:0 1px 8px rgba(31,53,86,.06)}
+.topbar-in{max-width:1100px;gap:10px 22px;padding:10px 24px;flex-wrap:wrap}
+.topbar .return svg{fill:#1f3556}
+.brand{display:flex;flex-direction:column;margin:0;white-space:normal;overflow:visible;color:#1f3556!important}
+.brand-name{font:900 26px "Noto Serif TC",serif;letter-spacing:1px;color:#1f3556;line-height:1.3}
+.brand-sub{margin-top:2px;font:700 12px Lato,sans-serif;letter-spacing:3px;color:#8a6a1f}
+.nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-left:auto}
+.nav a{color:#1f2937!important;font:500 15px Lato,sans-serif;padding:6px 0}
+.nav a:hover{color:#8a6a1f!important}
+.nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:8px;
+ background:#1f3556;color:#fff!important;font:700 15px Lato,sans-serif}
+.page_body{padding:28px 0 2em}
+.card{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.post-title{color:#1f3556;font-family:"Noto Serif TC",serif}
+.byline{color:#6b7280}
+.post-body{color:#1f2937}
+.post-body a,.comments a{color:#7a4f12;text-decoration:underline}
+.post-body th,.post-body td{border-color:#e7dcc9}
+.post-body blockquote{color:#374151}
+.back{background:#1f3556;border-radius:8px}
+.comments{border-top:1px solid #e7dcc9;color:#1f2937}
+.comments .title{color:#1f3556}
+.comment{border-bottom-color:#eee3d2}
+.comment .when,.comment-empty,.comment-form .note{color:#6b7280}
+.comment .replies{border-left-color:#b08d3c}
+.comment .who .owner{background:#1f3556}
+.comment-form input,.comment-form textarea{border:1px solid #d9cdb8;border-radius:6px}
+.comment-form button{background:#1f3556;border-radius:8px}
+.tile{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.tile-title{color:#1f3556}
+.tile .views{color:#8a6a1f}
+@media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+ .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
 </style>
 </head>
 <body class="item" data-slug="laser-safety-hospital">
-<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
-<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="/"><span class="brand-name">黃建榮醫師</span><span class="brand-sub">泌尿科衛教・臺北醫學大學附設醫院</span></a>
+<nav class="nav" aria-label="手術主題"><a href="/laser/">雷射攝護腺剜除</a><a href="/davinci/">達文西手術</a><a href="/rirs/">RIRS 腎結石</a><a href="/#visit">看診資訊</a></nav>
+<a class="nav-cta" href="https://www.tmuh.org.tw/service/regist/08/080013" rel="noopener" target="_blank">北醫掛號</a></div></header>
 <div class="page_body">
 <main class="card">
 <div class="post">
@@ -280,14 +320,14 @@ a{color:#374561;text-decoration:none}
 <article class="post-body">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
 
-<div style="background: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; margin: 0px auto; max-width: 860px; padding: 0px 0px 60px;color:#1c1c1e">
+<div style="background: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; margin: 0px auto; max-width: 860px; padding: 0px 0px 60px;">
 
 <span style="color: #222222;"><!--&#9552;&#9552;&#9552; HERO &#9552;&#9552;&#9552;--></span>
-<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 45%, rgb(26, 58, 107) 80%, rgb(30, 64, 128) 100%); overflow: hidden; padding: 52px 28px 44px; position: relative; text-align: center;color:#ffffff">
+<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 45%, rgb(26, 58, 107) 80%, rgb(30, 64, 128) 100%); overflow: hidden; padding: 52px 28px 44px; position: relative; text-align: center;color:#1c1c1e">
   <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%); border-radius: 50%; color:#bdbdbd; height: 220px; pointer-events: none; position: absolute; right: -50px; top: -50px; width: 220px;"></div>
   <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%); border-radius: 50%; bottom: -40px; color:#a7a7a7; height: 160px; left: -40px; pointer-events: none; position: absolute; width: 160px;"></div>
 
-  <div style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96), rgb(212, 175, 55), rgb(160, 120, 32)) text; display: inline-block; font-weight: 700; letter-spacing: 5px; margin-bottom: 18px; text-transform: uppercase;color:#1c1c1e"><span style="color:#332e1f;">高階泌尿外科 &#10022; 安全指南</span></div>
+  <div style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96), rgb(212, 175, 55), rgb(160, 120, 32)) text; display: inline-block; font-weight: 700; letter-spacing: 5px; margin-bottom: 18px; text-transform: uppercase;"><span style="color:#332e1f;">高階泌尿外科 &#10022; 安全指南</span></div>
 
   <h1 style="color: #f0e8d0; font-size: clamp(22px,5vw,36px); font-weight: 700; line-height: 1.35; margin: 0px 0px 16px;">
     攝護腺雷射手術<br />
@@ -350,7 +390,7 @@ a{color:#374561;text-decoration:none}
 
 <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.15); color: #222222; margin-bottom: 8px; padding: 18px 20px;">
   <p style="color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 0px;">
-    💡 <strong style="color: #0d2347;">簡單說&#65306;</strong>攝護腺雷射手術是目前已知最微創&#12289;最不流血&#12289;恢復最快的攝護腺手術&#65292;非常適合高齡或有慢性病的患者&#12290;</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/s1264/Gemini_Generated_Image_qy89bmqy89bmqy89.png" style="margin-left: 1em; margin-right: 1em;color:#995842"><img border="0" data-original-height="847" data-original-width="1264" height="298" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/w446-h298/Gemini_Generated_Image_qy89bmqy89bmqy89.png" width="446" /></a></div><br />
+    💡 <strong style="color: #0d2347;">簡單說&#65306;</strong>攝護腺雷射手術是目前已知最微創&#12289;最不流血&#12289;恢復最快的攝護腺手術&#65292;非常適合高齡或有慢性病的患者&#12290;</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/s1264/Gemini_Generated_Image_qy89bmqy89bmqy89.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="847" data-original-width="1264" height="298" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/w446-h298/Gemini_Generated_Image_qy89bmqy89bmqy89.png" width="446" /></a></div><br />
   <p></p>
 </div>
 
@@ -365,15 +405,15 @@ a{color:#374561;text-decoration:none}
 
 <span style="color: #222222;"><!--時間軸--></span>
 <div style="color: #222222; margin: 0px 0px 24px; padding-left: 28px; position: relative;">
-  <div style="background: linear-gradient(rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 2px; bottom: 0px; left: 10px; position: absolute; top: 0px; width: 2px;color:#ffffff"></div>
+  <div style="background: linear-gradient(rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 2px; bottom: 0px; left: 10px; position: absolute; top: 0px; width: 2px;color:#1c1c1e"></div>
 
   <div style="margin-bottom: 22px; position: relative;">
-    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#ffffff"></div>
+    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#1c1c1e"></div>
     <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術前一天 / 當天</strong>
     <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">入院辦理&#12289;麻醉前評估&#12289;備皮&#65292;通常下午或隔天早上手術</p>
   </div>
   <div style="margin-bottom: 22px; position: relative;">
-    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#ffffff"></div>
+    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#1c1c1e"></div>
     <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術當天</strong>
     <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">手術時間約 1&#8211;2 小時&#65292;術後放置尿管幫助膀胱沖洗&#65292;當天即可下床走動</p>
   </div>
@@ -548,7 +588,7 @@ a{color:#374561;text-decoration:none}
 <span style="color: #222222;"><!--醫師簽名--></span>
 <div style="border-top: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-top: 44px; padding-top: 28px;">
   <div style="align-items: flex-start; display: flex; flex-wrap: wrap; gap: 18px;">
-    <div style="align-items: center; background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 50%; display: flex; flex-shrink: 0; height: 66px; justify-content: center; width: 66px;color:#ffffff">
+    <div style="align-items: center; background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 50%; display: flex; flex-shrink: 0; height: 66px; justify-content: center; width: 66px;color:#1c1c1e">
       <span style="color: white; font-size: 24px;">👨&#8205;&#9877;&#65039;</span>
     </div>
     <div style="flex: 1 1 0%; min-width: 200px;">
@@ -578,7 +618,7 @@ a{color:#374561;text-decoration:none}
 
 </div><span style="color: #222222;"><!--/padding wrapper--></span>
 </div><!--/main wrapper-->
-<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color:#c0c5ca; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color: #1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>

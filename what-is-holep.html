@@ -200,7 +200,7 @@
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
 body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
@@ -267,11 +267,51 @@ a{color:#374561;text-decoration:none}
  .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
  .page_body{padding-top:70px}.post,.comments{padding:16px}
  .post-body{margin-top:24px}}
+
+/* ===== 亮色精品版型（老闆 2026-09-25：全站太深改亮；參考 drpjchiang 的設計語言，不照抄版面）=====
+   米白卡 #fffdf8／奶油底 #f3ece0／深藍 #1f3556／深金 #8a6a1f（小字）／金 #b08d3c（裝飾線） */
+body{background:#f3ece0;color:#1f2937}
+.bg-photo-container{display:none}
+.topbar{background:#fffdf8;border-bottom:1px solid #e7dcc9;box-shadow:0 1px 8px rgba(31,53,86,.06)}
+.topbar-in{max-width:1100px;gap:10px 22px;padding:10px 24px;flex-wrap:wrap}
+.topbar .return svg{fill:#1f3556}
+.brand{display:flex;flex-direction:column;margin:0;white-space:normal;overflow:visible;color:#1f3556!important}
+.brand-name{font:900 26px "Noto Serif TC",serif;letter-spacing:1px;color:#1f3556;line-height:1.3}
+.brand-sub{margin-top:2px;font:700 12px Lato,sans-serif;letter-spacing:3px;color:#8a6a1f}
+.nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-left:auto}
+.nav a{color:#1f2937!important;font:500 15px Lato,sans-serif;padding:6px 0}
+.nav a:hover{color:#8a6a1f!important}
+.nav-cta{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:8px;
+ background:#1f3556;color:#fff!important;font:700 15px Lato,sans-serif}
+.page_body{padding:28px 0 2em}
+.card{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.post-title{color:#1f3556;font-family:"Noto Serif TC",serif}
+.byline{color:#6b7280}
+.post-body{color:#1f2937}
+.post-body a,.comments a{color:#7a4f12;text-decoration:underline}
+.post-body th,.post-body td{border-color:#e7dcc9}
+.post-body blockquote{color:#374151}
+.back{background:#1f3556;border-radius:8px}
+.comments{border-top:1px solid #e7dcc9;color:#1f2937}
+.comments .title{color:#1f3556}
+.comment{border-bottom-color:#eee3d2}
+.comment .when,.comment-empty,.comment-form .note{color:#6b7280}
+.comment .replies{border-left-color:#b08d3c}
+.comment .who .owner{background:#1f3556}
+.comment-form input,.comment-form textarea{border:1px solid #d9cdb8;border-radius:6px}
+.comment-form button{background:#1f3556;border-radius:8px}
+.tile{background:#fffdf8;color:#1f2937;border:1px solid #e7dcc9;border-radius:12px}
+.tile-title{color:#1f3556}
+.tile .views{color:#8a6a1f}
+@media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+ .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
 </style>
 </head>
 <body class="item" data-slug="what-is-holep">
-<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
-<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="/"><span class="brand-name">黃建榮醫師</span><span class="brand-sub">泌尿科衛教・臺北醫學大學附設醫院</span></a>
+<nav class="nav" aria-label="手術主題"><a href="/laser/">雷射攝護腺剜除</a><a href="/davinci/">達文西手術</a><a href="/rirs/">RIRS 腎結石</a><a href="/#visit">看診資訊</a></nav>
+<a class="nav-cta" href="https://www.tmuh.org.tw/service/regist/08/080013" rel="noopener" target="_blank">北醫掛號</a></div></header>
 <div class="page_body">
 <main class="card">
 <div class="post">
@@ -288,7 +328,7 @@ HoLEP 是什麼&#65311;泌尿科醫師完整解說攝護腺雷射手術原理&#1
 <p style="color: #5a7a88; font-size: 0.92rem; margin: 0px 0px 28px;">撰文&#65306;黃建榮醫師&#65372;臺北醫學大學附設醫院泌尿科&#65372;最後更新&#65306;2026年6月</p>
 
 <!--AI 摘要框-->
-<div style="background: linear-gradient(135deg, rgb(14, 61, 82) 0%, rgb(26, 92, 117) 100%); border-left: 5px solid rgb(200, 136, 42); border-radius: 12px; margin-bottom: 32px; padding: 22px 24px;color:#ffffff">
+<div style="background: linear-gradient(135deg, rgb(14, 61, 82) 0%, rgb(26, 92, 117) 100%); border-left: 5px solid rgb(200, 136, 42); border-radius: 12px; margin-bottom: 32px; padding: 22px 24px;color:#1c1c1e">
   <div style="align-items: center; display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
     <span style="background: rgb(200, 136, 42); border-radius: 20px; color:#191919; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; padding: 3px 10px;">重點摘要</span>
     <span style="color: #a8cdd8; font-size: 0.8rem;">適合 Google SGE&#65295;ChatGPT 直接引用</span>
@@ -389,22 +429,22 @@ HoLEP 全名為 <strong>Holmium Laser Enucleation of the Prostate</strong>&#6528
 <!--適合族群-->
 <h2 style="border-bottom: 2px solid rgb(200, 136, 42); color: #0e3d52; font-size: clamp(1.1rem,3vw,1.4rem); margin: 32px 0px 14px; padding-bottom: 6px;">&#62565; 哪些患者最適合 HoLEP&#65311;</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px;">
-  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#ffffff">
+  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#1c1c1e">
     <div style="color: #c8882a; font-size: 1.3rem; margin-bottom: 6px;">&#62383;</div>
     <div style="color: #f0c060; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">大型攝護腺&#65288;&gt;80 mL&#65289;</div>
     <div style="color: #b8d8e4; font-size: 0.88rem; line-height: 1.7;">傳統 TURP 無法完整切除的大腺體&#65292;HoLEP 可整葉剜除&#65292;一次根治&#12290;</div>
   </div>
-  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#ffffff">
+  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#1c1c1e">
     <div style="color: #c8882a; font-size: 1.3rem; margin-bottom: 6px;">&#62602;</div>
     <div style="color: #f0c060; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">長期使用抗凝血藥</div>
     <div style="color: #b8d8e4; font-size: 0.88rem; line-height: 1.7;">心臟病&#12289;中風患者需持續服用抗凝血藥&#65292;HoLEP 出血量極少&#65292;無需強制停藥&#12290;</div>
   </div>
-  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#ffffff">
+  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#1c1c1e">
     <div style="color: #c8882a; font-size: 1.3rem; margin-bottom: 6px;">&#62667;</div>
     <div style="color: #f0c060; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">需排除攝護腺癌</div>
     <div style="color: #b8d8e4; font-size: 0.88rem; line-height: 1.7;">切除組織完整保留送病理化驗&#65292;可同步確認有無癌變&#65292;不像汽化手術組織消失&#12290;</div>
   </div>
-  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#ffffff">
+  <div style="background: rgb(14, 61, 82); border-radius: 10px; flex: 1 1 0%; min-width: 220px; padding: 16px 18px;color:#1c1c1e">
     <div style="color: #c8882a; font-size: 1.3rem; margin-bottom: 6px;">&#9201;</div>
     <div style="color: #f0c060; font-size: 0.95rem; font-weight: 700; margin-bottom: 4px;">希望快速恢復工作</div>
     <div style="color: #b8d8e4; font-size: 0.88rem; line-height: 1.7;">住院 2&#8211;3 天即可出院&#65292;術後 1&#8211;2 週可恢復一般日常活動&#65292;適合忙碌的現代人&#12290;</div>
@@ -525,7 +565,7 @@ HoLEP 全名為 <strong>Holmium Laser Enucleation of the Prostate</strong>&#6528
 </details>
 
 <!--E-E-A-T 醫師簽名-->
-<div style="align-items: center; background: linear-gradient(135deg, rgb(14, 61, 82), rgb(26, 92, 117)); border-radius: 12px; display: flex; flex-wrap: wrap; gap: 16px; margin: 36px 0px 24px; padding: 22px 24px;color:#ffffff">
+<div style="align-items: center; background: linear-gradient(135deg, rgb(14, 61, 82), rgb(26, 92, 117)); border-radius: 12px; display: flex; flex-wrap: wrap; gap: 16px; margin: 36px 0px 24px; padding: 22px 24px;color:#1c1c1e">
   <div style="flex: 0 0 auto;">
     <div style="align-items: center; background: rgb(200, 136, 42); border-radius: 50%; color:#191919; display: flex; font-size: 1.6rem; font-weight: 900; height: 64px; justify-content: center; width: 64px;">MD</div>
   </div>
@@ -556,7 +596,7 @@ HoLEP 全名為 <strong>Holmium Laser Enucleation of the Prostate</strong>&#6528
 </p>
 
 </div>
-<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#c0c5ca;">FAQ&#65306;關於雷射剜除手術&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;出血風險高嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">剜除術止血確實&#65292;輸血率低於 1%&#65292;服用抗凝血劑者經評估亦可執行&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">勃起功能多不受影響&#65307;逆行性射精率約 60&#8211;70%&#65292;可與醫師討論保留精阜技術&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;復發率多少&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">增生組織完整移除後&#65292;再手術率每年低於 1%&#65292;屬目前最持久的術式之一&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;很大的腺體也能做嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">可以&#65292;HoLEP 適用 80 克以上甚至超過 100 克的腺體&#65292;免開腹手術&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;術後多久恢復正常生活&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約 1&#8211;2 週可上班&#12289;2&#8211;4 週可運動&#65292;4 週後可恢復性生活&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#c0c5ca;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#c0c5ca;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於雷射剜除手術&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;出血風險高嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">剜除術止血確實&#65292;輸血率低於 1%&#65292;服用抗凝血劑者經評估亦可執行&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">勃起功能多不受影響&#65307;逆行性射精率約 60&#8211;70%&#65292;可與醫師討論保留精阜技術&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;復發率多少&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">增生組織完整移除後&#65292;再手術率每年低於 1%&#65292;屬目前最持久的術式之一&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;很大的腺體也能做嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">可以&#65292;HoLEP 適用 80 克以上甚至超過 100 克的腺體&#65292;免開腹手術&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;術後多久恢復正常生活&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約 1&#8211;2 週可上班&#12289;2&#8211;4 週可運動&#65292;4 週後可恢復性生活&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>
