@@ -153,33 +153,87 @@
   }
  ]
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
-body{margin:0;background:#fff;color:#1c1c1e;
- font-family:-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
- line-height:1.85;font-size:17px;-webkit-text-size-adjust:100%}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.6rem;line-height:1.45;margin:.2em 0 .6em}
-h2{font-size:1.25rem;margin:2em 0 .6em;padding-left:.55em;border-left:5px solid #2fa8a0}
-h3{font-size:1.08rem;margin:1.5em 0 .5em}
-img{max-width:100%;height:auto;display:block;margin:1.2em auto;border-radius:10px}
-table{width:100%;border-collapse:collapse;margin:1.4em 0;font-size:.95rem}
-th,td{border:1px solid #e0e0e0;padding:.6em .7em;text-align:left;vertical-align:top}
-th{background:#f4faf9}
-a{color:#127d76}
-.meta{color:#6b6b70;font-size:.9rem;margin-bottom:1.8em;
- padding-bottom:1.2em;border-bottom:1px solid #eee}
-.back{display:inline-block;margin:2.5em 0 0;padding:.6em 1.2em;
- background:#2fa8a0;color:#fff;text-decoration:none;border-radius:8px}
-@media(max-width:600px){body{font-size:16px}.wrap{padding:18px 14px 48px}}
+body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
+ font:400 16px Lato,sans-serif;-webkit-text-size-adjust:100%}
+a{color:#374561;text-decoration:none}
+.bg-photo-container{position:absolute;top:0;left:0;right:0;height:464px;overflow:hidden;z-index:0}
+.bg-photo{height:100%;background:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w800/messageImage_1778552726632.jpg) 50%/cover no-repeat}
+@media(min-width:801px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1200/messageImage_1778552726632.jpg)}}
+@media(min-width:1201px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1600/messageImage_1778552726632.jpg)}}
+.item .bg-photo{filter:blur(12px);transform:scale(1.05)}
+.topbar{position:sticky;top:0;z-index:10;background:#da7d5e;
+ box-shadow:0 0 20px 0 rgba(0,0,0,.2)}
+.topbar-in{max-width:1185px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 24px}
+.topbar a{color:#fff}
+.topbar .return{display:flex;padding:8px;margin-left:-8px}
+.topbar .return svg{width:24px;height:24px;fill:#fff}
+.brand{font:700 32px Lato,sans-serif;margin:16px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.page_body{position:relative;z-index:1;padding:102px 0 1em}
+.card{max-width:890px;margin:0 auto;background:#374561;color:#fff}
+.post{padding:32px}
+.post-title{margin:0;color:#fff;font:900 24px Lato,sans-serif;line-height:1.4}
+.byline{margin:6px 0 0;color:#fff;font:italic 400 12px Merriweather,Georgia,serif}
+.byline .views[hidden]{display:none}
+.post-body{margin-top:40px;color:#fff;font:400 16px Merriweather,Georgia,serif;line-height:32px;
+ overflow-wrap:break-word}
+.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{color:inherit}
+.post-body a,.comments a{color:#da7d5e}
+.post-body img{max-width:100%;height:auto}
+.post-body table{max-width:100%;border-collapse:collapse}
+.post-body th,.post-body td{border:1px solid rgba(255,255,255,.25);padding:.4em .6em;vertical-align:top}
+.post-body blockquote{color:#eee;font-size:x-large;font-style:italic;font-weight:300;text-align:center}
+.back{display:inline-block;margin-top:40px;padding:8px 16px;background:#da7d5e;color:#fff!important;
+ font:500 14px Lato,sans-serif}
+.comments[hidden]{display:none}
+.comments{border-top:1px solid rgba(0,0,0,.12);padding:32px;color:#fff}
+.comments .title{margin:0 0 16px;font:900 18px Lato,sans-serif;color:#fff}
+.comment-list{list-style:none;margin:0 0 24px;padding:0}
+.comment{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.comment .who{font:700 14px Lato,sans-serif}
+.comment .who .owner{margin-left:6px;padding:1px 6px;background:#da7d5e;color:#fff;font-size:12px;font-weight:400}
+.comment .when{margin-left:8px;color:rgba(255,255,255,.6);font:italic 400 12px Merriweather,Georgia,serif}
+.comment .text{margin-top:6px;font:400 15px Merriweather,Georgia,serif;line-height:28px;white-space:pre-wrap;overflow-wrap:anywhere}
+.comment .replies{list-style:none;margin:8px 0 0 24px;padding:0 0 0 16px;border-left:2px solid #da7d5e}
+.comment .replies .comment{border:0;padding:8px 0}
+.comment-empty{color:rgba(255,255,255,.7);font:italic 400 14px Merriweather,Georgia,serif}
+.comment-form label{display:block;margin:0 0 12px;font:400 14px Lato,sans-serif}
+.comment-form input,.comment-form textarea{display:block;box-sizing:border-box;width:100%;margin-top:4px;
+ padding:10px 12px;border:0;border-radius:0;background:#fff;color:#1c1c1e;font:400 16px Lato,sans-serif}
+.comment-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.comment-form .note{margin:0 0 12px;color:rgba(255,255,255,.75);font:italic 400 12px Merriweather,Georgia,serif;line-height:20px}
+.comment-form button{padding:10px 20px;border:0;background:#da7d5e;color:#fff;font:500 14px Lato,sans-serif;
+ text-transform:uppercase;cursor:pointer}
+.comment-form button[disabled]{opacity:.6;cursor:default}
+.form-msg{margin-left:12px;font:400 14px Lato,sans-serif}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grid{max-width:1185px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 15px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:24px 16px;
+ background:#374561;color:#fff;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+.tile:hover{box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}
+.tile-title{font:900 16px Lato,sans-serif;line-height:24px;color:#fff}
+.tile .views{margin-top:16px;color:#da7d5e;font:italic 400 12px Merriweather,Georgia,serif}
+.tile .views[hidden]{display:none}
+@media(max-width:680px){
+ .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
+ .page_body{padding-top:70px}.post,.comments{padding:16px}
+ .post-body{margin-top:24px}}
 </style>
 </head>
-<body>
-<div class="wrap">
-<h1>攝護腺雷射手術恢復期&#65311;</h1>
-<div class="meta">作者：黃建榮 醫師｜泌尿科</div>
-<article>
-<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺雷射手術恢復期約 2&#8211;4 週&#65306;導尿管 1&#8211;2 天移除&#12289;1&#8211;2 週回到辦公室工作&#12289;2&#8211;4 週恢復運動&#65307;完全癒合約 4&#8211;6 週&#65292;期間避免騎車與提超過 5 公斤重物&#12290;</p></div><p><span style="font-size: large;"><b>攝護腺雷射手術需要多久恢復期&#65311;黃建榮醫師完整解析</b></span></p>
+<body class="item" data-slug="laser-recovery">
+<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<div class="page_body">
+<main class="card">
+<div class="post">
+<h1 class="post-title">攝護腺雷射手術恢復期&#65311;</h1>
+<div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="laser-recovery" hidden></span></div>
+<article class="post-body">
+<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;color:#1c1c1e"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺雷射手術恢復期約 2&#8211;4 週&#65306;導尿管 1&#8211;2 天移除&#12289;1&#8211;2 週回到辦公室工作&#12289;2&#8211;4 週恢復運動&#65307;完全癒合約 4&#8211;6 週&#65292;期間避免騎車與提超過 5 公斤重物&#12290;</p></div><p><span style="font-size: large;"><b>攝護腺雷射手術需要多久恢復期&#65311;黃建榮醫師完整解析</b></span></p>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">前言&#65306;手術之後&#65292;我什麼時候可以&#12300;正常生活&#12301;&#65311;</p>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">這是診間最常被問到的問題之一&#12290;</p>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">許多病患在考慮攝護腺雷射手術時&#65292;心裡最大的疑慮不是&#12300;手術本身&#12301;&#65292;而是術後的不確定感&#65306;<strong>&#12300;我需要躺多久&#65311;&#12301;&#12300;導尿管要放幾天&#65311;&#12301;&#12300;什麼時候可以上班&#12289;出門&#12289;運動&#65311;&#12301;</strong></p>
@@ -276,9 +330,24 @@ a{color:#127d76}
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>本文作者&#65306;<strong>北醫泌尿科 黃建榮醫師&#65288;Dr. Andy Huang&#65289;</strong></em>
 <em>專長&#65306;攝護腺雷射手術&#12289;達文西機器人手術&#12289;微創泌尿外科</em>
 <em>專業網站&#65306;<a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="./">Dr. Laser 攝護腺雷射手術專網</a></em></p>
-<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;術後多久可以上班開車&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約 1 週可開車&#12289;1&#8211;2 週可回辦公室工作&#65292;粗重工作建議滿 4 週再開始&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;術後血尿正常嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">1&#8211;2 週內輕微血尿常見&#65292;每天喝水 2,000 毫升以上&#65307;大量血塊或解不出尿應立即回診&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;什麼時候能運動&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;術後要回診幾次&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#c0c5ca;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;術後多久可以上班開車&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約 1 週可開車&#12289;1&#8211;2 週可回辦公室工作&#65292;粗重工作建議滿 4 週再開始&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;術後血尿正常嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">1&#8211;2 週內輕微血尿常見&#65292;每天喝水 2,000 毫升以上&#65307;大量血塊或解不出尿應立即回診&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;什麼時候能運動&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;術後要回診幾次&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#c0c5ca;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#c0c5ca;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>
+<section class="comments" id="comments" data-slug="laser-recovery" hidden>
+<h3 class="title">留言</h3>
+<ol class="comment-list"></ol>
+<p class="comment-empty">載入留言中…</p>
+<form class="comment-form" novalidate>
+<label>暱稱<input name="name" maxlength="40" autocomplete="nickname" required></label>
+<label>留言內容<textarea name="body" rows="4" maxlength="2000" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="note">留言會公開顯示，請勿留下病歷、電話、身分證字號等個人資料；個別病情請至門診諮詢。</p>
+<button type="submit">張貼留言</button><span class="form-msg" role="status"></span>
+</form>
+</section>
+</main>
+</div>
+<script src="assets/engage.js" defer></script>
 </body>
 </html>

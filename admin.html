@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>留言管理</title>
+<style>
+body{margin:0;background:#eed7c2;color:#1c1c1e;font:16px/1.6 -apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+header{background:#da7d5e;color:#fff;padding:14px 16px;font-weight:700;font-size:20px}
+main{max-width:890px;margin:0 auto;padding:16px}
+.box{background:#fff;padding:16px;margin-bottom:12px}
+input,textarea,button,select{font:inherit}
+input,textarea{box-sizing:border-box;width:100%;padding:8px;border:1px solid #ccc}
+button{padding:6px 14px;border:0;background:#374561;color:#fff;cursor:pointer;margin:4px 6px 0 0}
+button.warn{background:#b3261e}button.ok{background:#2e7d32}button.alt{background:#da7d5e}
+.tabs button{background:#fff;color:#374561;border:1px solid #374561}
+.tabs button.on{background:#374561;color:#fff}
+.meta{color:#666;font-size:13px}.meta a{color:#374561}
+.text{white-space:pre-wrap;overflow-wrap:anywhere;margin:6px 0}
+.st{display:inline-block;padding:0 6px;font-size:12px;color:#fff;background:#888}
+.st.pending{background:#da7d5e}.st.published{background:#2e7d32}
+#msg{min-height:1.5em}
+</style>
+</head>
+<body>
+<header>留言管理｜drandy9168.com</header>
+<main>
+<div class="box" id="login">
+<label>管理密碼（ADMIN_TOKEN）<input type="password" id="token" autocomplete="current-password"></label>
+<button id="go">登入</button>
+</div>
+<div id="panel" hidden>
+<div class="tabs">
+<button data-st="pending" class="on">待審核</button><button data-st="published">已公開</button><button data-st="hidden">已隱藏</button><button data-st="all">全部</button>
+</div>
+<p id="msg" role="status"></p>
+<div id="list"></div>
+</div>
+</main>
+<script>
+(function () {
+  var API = window.DRANDY_API || "/api", status = "pending", token = "";
+  try { token = sessionStorage.getItem("adm") || ""; } catch (e) {}
+  var $ = function (s) { return document.querySelector(s); };
+
+  function call(method, path, body) {
+    return fetch(API + "/admin" + path, {
+      method: method,
+      headers: Object.assign({ Authorization: "Bearer " + token }, body ? { "Content-Type": "application/json" } : {}),
+      body: body ? JSON.stringify(body) : undefined
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) throw new Error(j.error || ("HTTP " + r.status));
+        return j;
+      });
+    });
+  }
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function btn(label, cls, fn) {
+    var b = el("button", cls, label);
+    b.addEventListener("click", fn);
+    return b;
+  }
+
+  function act(p) { p.then(load, function (e) { $("#msg").textContent = e.message; }); }
+
+  function row(c) {
+    var d = el("div", "box");
+    var meta = el("div", "meta");
+    meta.appendChild(el("span", "st " + c.status, { published: "已公開", pending: "待審核", hidden: "已隱藏" }[c.status]));
+    meta.appendChild(document.createTextNode(" #" + c.id + "　" + new Date(c.created_at * 1000).toLocaleString("zh-TW") + "　"));
+    var a = el("a", null, c.slug);
+    a.href = "./" + c.slug + ".html#c" + c.id;
+    a.target = "_blank";
+    meta.appendChild(a);
+    if (c.parent_id) meta.appendChild(document.createTextNode("（回覆 #" + c.parent_id + "）"));
+    d.appendChild(meta);
+    d.appendChild(el("strong", null, c.name + (c.is_owner ? "（作者）" : "")));
+    d.appendChild(el("div", "text", c.body));
+    if (c.status !== "published") d.appendChild(btn("公開", "ok", function () { act(call("POST", "/comments/" + c.id + "/approve")); }));
+    if (c.status !== "hidden") d.appendChild(btn("隱藏", "", function () { act(call("POST", "/comments/" + c.id + "/hide")); }));
+    d.appendChild(btn("刪除", "warn", function () {
+      if (confirm("確定刪除 #" + c.id + "？（連同底下的回覆）")) act(call("DELETE", "/comments/" + c.id));
+    }));
+    if (!c.is_owner) {
+      d.appendChild(btn("以醫師身分回覆", "alt", function () {
+        var t = el("textarea"); t.rows = 3;
+        var send = btn("送出回覆（同時公開原留言）", "ok", function () {
+          if (t.value.trim()) act(call("POST", "/comments/" + c.id + "/reply", { body: t.value }));
+        });
+        d.appendChild(t); d.appendChild(send); t.focus();
+      }));
+    }
+    return d;
+  }
+
+  function load() {
+    $("#msg").textContent = "載入中…";
+    return call("GET", "/comments?status=" + status).then(function (j) {
+      $("#login").hidden = true; $("#panel").hidden = false;
+      var list = $("#list"); list.textContent = "";
+      j.comments.forEach(function (c) { list.appendChild(row(c)); });
+      $("#msg").textContent = j.comments.length ? "" : "沒有留言。";
+    }, function (e) {
+      $("#login").hidden = false; $("#panel").hidden = true;
+      alert(e.message);
+    });
+  }
+
+  $("#go").addEventListener("click", function () {
+    token = $("#token").value.trim();
+    try { sessionStorage.setItem("adm", token); } catch (e) {}
+    load();
+  });
+  [].forEach.call(document.querySelectorAll(".tabs button"), function (b) {
+    b.addEventListener("click", function () {
+      [].forEach.call(document.querySelectorAll(".tabs button"), function (x) { x.classList.toggle("on", x === b); });
+      status = b.getAttribute("data-st"); load();
+    });
+  });
+  if (token) load();
+})();
+</script>
+</body>
+</html>

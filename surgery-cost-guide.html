@@ -211,32 +211,86 @@
   }
  ]
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
-body{margin:0;background:#fff;color:#1c1c1e;
- font-family:-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
- line-height:1.85;font-size:17px;-webkit-text-size-adjust:100%}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.6rem;line-height:1.45;margin:.2em 0 .6em}
-h2{font-size:1.25rem;margin:2em 0 .6em;padding-left:.55em;border-left:5px solid #2fa8a0}
-h3{font-size:1.08rem;margin:1.5em 0 .5em}
-img{max-width:100%;height:auto;display:block;margin:1.2em auto;border-radius:10px}
-table{width:100%;border-collapse:collapse;margin:1.4em 0;font-size:.95rem}
-th,td{border:1px solid #e0e0e0;padding:.6em .7em;text-align:left;vertical-align:top}
-th{background:#f4faf9}
-a{color:#127d76}
-.meta{color:#6b6b70;font-size:.9rem;margin-bottom:1.8em;
- padding-bottom:1.2em;border-bottom:1px solid #eee}
-.back{display:inline-block;margin:2.5em 0 0;padding:.6em 1.2em;
- background:#2fa8a0;color:#fff;text-decoration:none;border-radius:8px}
-@media(max-width:600px){body{font-size:16px}.wrap{padding:18px 14px 48px}}
+body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
+ font:400 16px Lato,sans-serif;-webkit-text-size-adjust:100%}
+a{color:#374561;text-decoration:none}
+.bg-photo-container{position:absolute;top:0;left:0;right:0;height:464px;overflow:hidden;z-index:0}
+.bg-photo{height:100%;background:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w800/messageImage_1778552726632.jpg) 50%/cover no-repeat}
+@media(min-width:801px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1200/messageImage_1778552726632.jpg)}}
+@media(min-width:1201px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1600/messageImage_1778552726632.jpg)}}
+.item .bg-photo{filter:blur(12px);transform:scale(1.05)}
+.topbar{position:sticky;top:0;z-index:10;background:#da7d5e;
+ box-shadow:0 0 20px 0 rgba(0,0,0,.2)}
+.topbar-in{max-width:1185px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 24px}
+.topbar a{color:#fff}
+.topbar .return{display:flex;padding:8px;margin-left:-8px}
+.topbar .return svg{width:24px;height:24px;fill:#fff}
+.brand{font:700 32px Lato,sans-serif;margin:16px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.page_body{position:relative;z-index:1;padding:102px 0 1em}
+.card{max-width:890px;margin:0 auto;background:#374561;color:#fff}
+.post{padding:32px}
+.post-title{margin:0;color:#fff;font:900 24px Lato,sans-serif;line-height:1.4}
+.byline{margin:6px 0 0;color:#fff;font:italic 400 12px Merriweather,Georgia,serif}
+.byline .views[hidden]{display:none}
+.post-body{margin-top:40px;color:#fff;font:400 16px Merriweather,Georgia,serif;line-height:32px;
+ overflow-wrap:break-word}
+.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{color:inherit}
+.post-body a,.comments a{color:#da7d5e}
+.post-body img{max-width:100%;height:auto}
+.post-body table{max-width:100%;border-collapse:collapse}
+.post-body th,.post-body td{border:1px solid rgba(255,255,255,.25);padding:.4em .6em;vertical-align:top}
+.post-body blockquote{color:#eee;font-size:x-large;font-style:italic;font-weight:300;text-align:center}
+.back{display:inline-block;margin-top:40px;padding:8px 16px;background:#da7d5e;color:#fff!important;
+ font:500 14px Lato,sans-serif}
+.comments[hidden]{display:none}
+.comments{border-top:1px solid rgba(0,0,0,.12);padding:32px;color:#fff}
+.comments .title{margin:0 0 16px;font:900 18px Lato,sans-serif;color:#fff}
+.comment-list{list-style:none;margin:0 0 24px;padding:0}
+.comment{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.comment .who{font:700 14px Lato,sans-serif}
+.comment .who .owner{margin-left:6px;padding:1px 6px;background:#da7d5e;color:#fff;font-size:12px;font-weight:400}
+.comment .when{margin-left:8px;color:rgba(255,255,255,.6);font:italic 400 12px Merriweather,Georgia,serif}
+.comment .text{margin-top:6px;font:400 15px Merriweather,Georgia,serif;line-height:28px;white-space:pre-wrap;overflow-wrap:anywhere}
+.comment .replies{list-style:none;margin:8px 0 0 24px;padding:0 0 0 16px;border-left:2px solid #da7d5e}
+.comment .replies .comment{border:0;padding:8px 0}
+.comment-empty{color:rgba(255,255,255,.7);font:italic 400 14px Merriweather,Georgia,serif}
+.comment-form label{display:block;margin:0 0 12px;font:400 14px Lato,sans-serif}
+.comment-form input,.comment-form textarea{display:block;box-sizing:border-box;width:100%;margin-top:4px;
+ padding:10px 12px;border:0;border-radius:0;background:#fff;color:#1c1c1e;font:400 16px Lato,sans-serif}
+.comment-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.comment-form .note{margin:0 0 12px;color:rgba(255,255,255,.75);font:italic 400 12px Merriweather,Georgia,serif;line-height:20px}
+.comment-form button{padding:10px 20px;border:0;background:#da7d5e;color:#fff;font:500 14px Lato,sans-serif;
+ text-transform:uppercase;cursor:pointer}
+.comment-form button[disabled]{opacity:.6;cursor:default}
+.form-msg{margin-left:12px;font:400 14px Lato,sans-serif}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grid{max-width:1185px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 15px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:24px 16px;
+ background:#374561;color:#fff;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+.tile:hover{box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}
+.tile-title{font:900 16px Lato,sans-serif;line-height:24px;color:#fff}
+.tile .views{margin-top:16px;color:#da7d5e;font:italic 400 12px Merriweather,Georgia,serif}
+.tile .views[hidden]{display:none}
+@media(max-width:680px){
+ .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
+ .page_body{padding-top:70px}.post,.comments{padding:16px}
+ .post-body{margin-top:24px}}
 </style>
 </head>
-<body>
-<div class="wrap">
-<h1>2026 攝護腺手術術式與費用全攻略</h1>
-<div class="meta">作者：黃建榮 醫師｜泌尿科</div>
-<article>
+<body class="item" data-slug="surgery-cost-guide">
+<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<div class="page_body">
+<main class="card">
+<div class="post">
+<h1 class="post-title">2026 攝護腺手術術式與費用全攻略</h1>
+<div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="surgery-cost-guide" hidden></span></div>
+<article class="post-body">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
 
 
@@ -244,7 +298,7 @@ a{color:#127d76}
 <div style="background: rgb(255, 255, 255); color: #222222; font-family: &quot;Noto Sans TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif; margin: 0px auto; max-width: 860px; padding: 16px;">
 
 <!--頂部色條-->
-<div style="background: linear-gradient(90deg, rgb(107, 58, 31) 0%, rgb(160, 82, 45) 50%, rgb(217, 138, 79) 100%); border-radius: 3px; height: 6px; margin-bottom: 28px;"></div>
+<div style="background: linear-gradient(90deg, rgb(107, 58, 31) 0%, rgb(160, 82, 45) 50%, rgb(217, 138, 79) 100%); border-radius: 3px; height: 6px; margin-bottom: 28px;color:#ffffff"></div>
 
 <!--H1 主標-->
 <h1 style="color: #d94f00; font-size: clamp(22px, 4vw, 34px); font-weight: 900; line-height: 1.4; margin: 0px 0px 8px;">
@@ -271,7 +325,7 @@ a{color:#127d76}
 <h2 style="background: linear-gradient(90deg, rgb(107, 58, 31), rgb(217, 138, 79)); border-radius: 10px; color: white; font-size: clamp(18px, 3vw, 24px); font-weight: 800; margin: 0px 0px 20px; padding: 12px 20px;">
   &#10102; 一張表看懂&#65306;五大術式核心數據比較
 </h2>
-<p style="color: #555555; font-size: 14px; margin: 0px 0px 10px;">📱 手機建議橫置閱讀</p><p style="color: #555555; font-size: 14px; margin: 0px 0px 10px;"></p><div class="separator" style="clear: both; text-align: left;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEgxSLXRhgIlcnwg_i2cDDb8Mg4N5Xw9id1PRlGBjXB8unAYEeUkaE6D2BZQ_obWMOjjr0A-88hGEh4SePQMvHvRBQkgbp-qYFnq3PH3WM-kySTljXVkdp4lGEzsuvPlFQiCrUUTFZMPXzAcUGEnNd2bB5Yq5KCv-P48l5mc_M1GhsI5T12AnbhoQnbsanKf" style="margin-left: 1em; margin-right: 1em;"><img alt="" data-original-height="744" data-original-width="1097" height="520" src="https://blogger.googleusercontent.com/img/a/AVvXsEgxSLXRhgIlcnwg_i2cDDb8Mg4N5Xw9id1PRlGBjXB8unAYEeUkaE6D2BZQ_obWMOjjr0A-88hGEh4SePQMvHvRBQkgbp-qYFnq3PH3WM-kySTljXVkdp4lGEzsuvPlFQiCrUUTFZMPXzAcUGEnNd2bB5Yq5KCv-P48l5mc_M1GhsI5T12AnbhoQnbsanKf=w766-h520" width="766" /></a></div><p></p>
+<p style="color: #555555; font-size: 14px; margin: 0px 0px 10px;">📱 手機建議橫置閱讀</p><p style="color: #555555; font-size: 14px; margin: 0px 0px 10px;"></p><div class="separator" style="clear: both; text-align: left;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEgxSLXRhgIlcnwg_i2cDDb8Mg4N5Xw9id1PRlGBjXB8unAYEeUkaE6D2BZQ_obWMOjjr0A-88hGEh4SePQMvHvRBQkgbp-qYFnq3PH3WM-kySTljXVkdp4lGEzsuvPlFQiCrUUTFZMPXzAcUGEnNd2bB5Yq5KCv-P48l5mc_M1GhsI5T12AnbhoQnbsanKf" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="" data-original-height="744" data-original-width="1097" height="520" src="https://blogger.googleusercontent.com/img/a/AVvXsEgxSLXRhgIlcnwg_i2cDDb8Mg4N5Xw9id1PRlGBjXB8unAYEeUkaE6D2BZQ_obWMOjjr0A-88hGEh4SePQMvHvRBQkgbp-qYFnq3PH3WM-kySTljXVkdp4lGEzsuvPlFQiCrUUTFZMPXzAcUGEnNd2bB5Yq5KCv-P48l5mc_M1GhsI5T12AnbhoQnbsanKf=w766-h520" width="766" /></a></div><p></p>
 
 <!--===== 第二區&#65306;雷射術式深度解析 =====-->
 <h2 style="background: linear-gradient(90deg, rgb(107, 58, 31), rgb(217, 138, 79)); border-radius: 10px; color: white; font-size: clamp(18px, 3vw, 24px); font-weight: 800; margin: 0px 0px 20px; padding: 12px 20px;">
@@ -604,15 +658,30 @@ a{color:#127d76}
       <a href="https://www.tmuh.org.tw/service/regist/08/080013" rel="noopener" style="background: rgb(255, 255, 255); border-radius: 50px; box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px; color: #6b3a1f; display: inline-block; font-size: 15px; font-weight: 800; padding: 13px 28px; text-decoration: none;" target="_blank">
         🏥 北醫附設醫院門診預約
       </a>
-      <a href="https://line.me/ti/p/~@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px; color: white; display: inline-block; font-size: 15px; font-weight: 800; padding: 13px 28px; text-decoration: none;" target="_blank">
+      <a href="https://line.me/ti/p/~@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px; color:#333333; display: inline-block; font-size: 15px; font-weight: 800; padding: 13px 28px; text-decoration: none;" target="_blank">
         💬 LINE @Dr.Andy 諮詢
       </a>
     </div>
   </div>
 </div>
-<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="./" rel="noopener" style="background: rgb(255, 255, 255); border-radius: 999px; border: 2px solid rgb(135, 47, 34); color: #471710; display: inline-block; font-size: 16px; padding: 12px 30px; text-align: center; text-decoration: none;" target="_blank">🏠 回到首頁</a></h2><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於治療選擇&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;攝護腺幾克以上要開刀&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">大小非唯一標準&#65306;30 克以上且藥物 3&#8211;6 個月無效可考慮&#65307;超過 80 克建議剜除術式&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;健保有給付嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">傳統刮除與雷射剜除多屬健保手術&#65288;部分耗材自費&#12289;住院 2&#8211;3 天&#65289;&#65307;Rezum 與 UroLift 為自費項目&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;怎麼挑選手術醫師&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">可詢問年手術量&#65288;50 例以上尤佳&#65289;&#12289;剜除經驗&#12289;併發症率與能否處理 80 克以上大腺體&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;大攝護腺&#65288;100 克以上&#65289;怎麼辦&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">HoLEP&#65295;ThuLEP 剜除不受大小限制&#65292;100 克以上仍可經尿道完成&#65292;免開腹&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;吃藥沒效還有哪些選擇&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">依腺體大小與需求選擇&#65306;30&#8211;80 克可評估 Rezum&#65292;各種大小皆適用剜除術&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<a href="./" rel="noopener" style="background: rgb(255, 255, 255); border-radius: 999px; border: 2px solid rgb(135, 47, 34); color: #471710; display: inline-block; font-size: 16px; padding: 12px 30px; text-align: center; text-decoration: none;" target="_blank">🏠 回到首頁</a></h2><h2 style="color:#c0c5ca; font-size: 1.15em;">FAQ&#65306;關於治療選擇&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;攝護腺幾克以上要開刀&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">大小非唯一標準&#65306;30 克以上且藥物 3&#8211;6 個月無效可考慮&#65307;超過 80 克建議剜除術式&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;健保有給付嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">傳統刮除與雷射剜除多屬健保手術&#65288;部分耗材自費&#12289;住院 2&#8211;3 天&#65289;&#65307;Rezum 與 UroLift 為自費項目&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;怎麼挑選手術醫師&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">可詢問年手術量&#65288;50 例以上尤佳&#65289;&#12289;剜除經驗&#12289;併發症率與能否處理 80 克以上大腺體&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;大攝護腺&#65288;100 克以上&#65289;怎麼辦&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">HoLEP&#65295;ThuLEP 剜除不受大小限制&#65292;100 克以上仍可經尿道完成&#65292;免開腹&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;吃藥沒效還有哪些選擇&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">依腺體大小與需求選擇&#65306;30&#8211;80 克可評估 Rezum&#65292;各種大小皆適用剜除術&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color:#c0c5ca; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>
+<section class="comments" id="comments" data-slug="surgery-cost-guide" hidden>
+<h3 class="title">留言</h3>
+<ol class="comment-list"></ol>
+<p class="comment-empty">載入留言中…</p>
+<form class="comment-form" novalidate>
+<label>暱稱<input name="name" maxlength="40" autocomplete="nickname" required></label>
+<label>留言內容<textarea name="body" rows="4" maxlength="2000" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="note">留言會公開顯示，請勿留下病歷、電話、身分證字號等個人資料；個別病情請至門診諮詢。</p>
+<button type="submit">張貼留言</button><span class="form-msg" role="status"></span>
+</form>
+</section>
+</main>
+</div>
+<script src="assets/engage.js" defer></script>
 </body>
 </html>

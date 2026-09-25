@@ -249,33 +249,87 @@
   }
  ]
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
-body{margin:0;background:#fff;color:#1c1c1e;
- font-family:-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
- line-height:1.85;font-size:17px;-webkit-text-size-adjust:100%}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.6rem;line-height:1.45;margin:.2em 0 .6em}
-h2{font-size:1.25rem;margin:2em 0 .6em;padding-left:.55em;border-left:5px solid #2fa8a0}
-h3{font-size:1.08rem;margin:1.5em 0 .5em}
-img{max-width:100%;height:auto;display:block;margin:1.2em auto;border-radius:10px}
-table{width:100%;border-collapse:collapse;margin:1.4em 0;font-size:.95rem}
-th,td{border:1px solid #e0e0e0;padding:.6em .7em;text-align:left;vertical-align:top}
-th{background:#f4faf9}
-a{color:#127d76}
-.meta{color:#6b6b70;font-size:.9rem;margin-bottom:1.8em;
- padding-bottom:1.2em;border-bottom:1px solid #eee}
-.back{display:inline-block;margin:2.5em 0 0;padding:.6em 1.2em;
- background:#2fa8a0;color:#fff;text-decoration:none;border-radius:8px}
-@media(max-width:600px){body{font-size:16px}.wrap{padding:18px 14px 48px}}
+body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
+ font:400 16px Lato,sans-serif;-webkit-text-size-adjust:100%}
+a{color:#374561;text-decoration:none}
+.bg-photo-container{position:absolute;top:0;left:0;right:0;height:464px;overflow:hidden;z-index:0}
+.bg-photo{height:100%;background:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w800/messageImage_1778552726632.jpg) 50%/cover no-repeat}
+@media(min-width:801px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1200/messageImage_1778552726632.jpg)}}
+@media(min-width:1201px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1600/messageImage_1778552726632.jpg)}}
+.item .bg-photo{filter:blur(12px);transform:scale(1.05)}
+.topbar{position:sticky;top:0;z-index:10;background:#da7d5e;
+ box-shadow:0 0 20px 0 rgba(0,0,0,.2)}
+.topbar-in{max-width:1185px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 24px}
+.topbar a{color:#fff}
+.topbar .return{display:flex;padding:8px;margin-left:-8px}
+.topbar .return svg{width:24px;height:24px;fill:#fff}
+.brand{font:700 32px Lato,sans-serif;margin:16px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.page_body{position:relative;z-index:1;padding:102px 0 1em}
+.card{max-width:890px;margin:0 auto;background:#374561;color:#fff}
+.post{padding:32px}
+.post-title{margin:0;color:#fff;font:900 24px Lato,sans-serif;line-height:1.4}
+.byline{margin:6px 0 0;color:#fff;font:italic 400 12px Merriweather,Georgia,serif}
+.byline .views[hidden]{display:none}
+.post-body{margin-top:40px;color:#fff;font:400 16px Merriweather,Georgia,serif;line-height:32px;
+ overflow-wrap:break-word}
+.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{color:inherit}
+.post-body a,.comments a{color:#da7d5e}
+.post-body img{max-width:100%;height:auto}
+.post-body table{max-width:100%;border-collapse:collapse}
+.post-body th,.post-body td{border:1px solid rgba(255,255,255,.25);padding:.4em .6em;vertical-align:top}
+.post-body blockquote{color:#eee;font-size:x-large;font-style:italic;font-weight:300;text-align:center}
+.back{display:inline-block;margin-top:40px;padding:8px 16px;background:#da7d5e;color:#fff!important;
+ font:500 14px Lato,sans-serif}
+.comments[hidden]{display:none}
+.comments{border-top:1px solid rgba(0,0,0,.12);padding:32px;color:#fff}
+.comments .title{margin:0 0 16px;font:900 18px Lato,sans-serif;color:#fff}
+.comment-list{list-style:none;margin:0 0 24px;padding:0}
+.comment{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.comment .who{font:700 14px Lato,sans-serif}
+.comment .who .owner{margin-left:6px;padding:1px 6px;background:#da7d5e;color:#fff;font-size:12px;font-weight:400}
+.comment .when{margin-left:8px;color:rgba(255,255,255,.6);font:italic 400 12px Merriweather,Georgia,serif}
+.comment .text{margin-top:6px;font:400 15px Merriweather,Georgia,serif;line-height:28px;white-space:pre-wrap;overflow-wrap:anywhere}
+.comment .replies{list-style:none;margin:8px 0 0 24px;padding:0 0 0 16px;border-left:2px solid #da7d5e}
+.comment .replies .comment{border:0;padding:8px 0}
+.comment-empty{color:rgba(255,255,255,.7);font:italic 400 14px Merriweather,Georgia,serif}
+.comment-form label{display:block;margin:0 0 12px;font:400 14px Lato,sans-serif}
+.comment-form input,.comment-form textarea{display:block;box-sizing:border-box;width:100%;margin-top:4px;
+ padding:10px 12px;border:0;border-radius:0;background:#fff;color:#1c1c1e;font:400 16px Lato,sans-serif}
+.comment-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.comment-form .note{margin:0 0 12px;color:rgba(255,255,255,.75);font:italic 400 12px Merriweather,Georgia,serif;line-height:20px}
+.comment-form button{padding:10px 20px;border:0;background:#da7d5e;color:#fff;font:500 14px Lato,sans-serif;
+ text-transform:uppercase;cursor:pointer}
+.comment-form button[disabled]{opacity:.6;cursor:default}
+.form-msg{margin-left:12px;font:400 14px Lato,sans-serif}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grid{max-width:1185px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 15px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:24px 16px;
+ background:#374561;color:#fff;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+.tile:hover{box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}
+.tile-title{font:900 16px Lato,sans-serif;line-height:24px;color:#fff}
+.tile .views{margin-top:16px;color:#da7d5e;font:italic 400 12px Merriweather,Georgia,serif}
+.tile .views[hidden]{display:none}
+@media(max-width:680px){
+ .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
+ .page_body{padding-top:70px}.post,.comments{padding:16px}
+ .post-body{margin-top:24px}}
 </style>
 </head>
-<body>
-<div class="wrap">
-<h1>💊 攝護腺肥大藥物要吃一輩子嗎&#65311;泌尿科醫師完整解析</h1>
-<div class="meta">作者：黃建榮 醫師｜泌尿科</div>
-<article>
-<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;">
+<body class="item" data-slug="bph-medication">
+<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<div class="page_body">
+<main class="card">
+<div class="post">
+<h1 class="post-title">💊 攝護腺肥大藥物要吃一輩子嗎&#65311;泌尿科醫師完整解析</h1>
+<div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="bph-medication" hidden></span></div>
+<article class="post-body">
+<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;color:#1c1c1e"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;color:#1c1c1e">
 
 <span style="color: #222222;"><!--AI Generative Summary--></span>
 <div style="background: rgb(232, 234, 246); border-left: 5px solid rgb(57, 73, 171); border-radius: 0px 10px 10px 0px; color: #222222; font-size: 16px; margin-bottom: 28px; padding: 16px 20px;">
@@ -288,7 +342,7 @@ a{color:#127d76}
 <div style="color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 14px; margin-bottom: 28px;">
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(57, 73, 171); padding: 12px 16px;">
+    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#ffffff">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">活路利淨</div>
       <div style="color: #c5cae9; font-size: 13px;">Alfuzosin / Uroxatral</div>
@@ -305,7 +359,7 @@ a{color:#127d76}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(40, 53, 147); padding: 12px 16px;">
+    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#ffffff">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">暢利淨/優列扶</div>
       <div style="color: #c5cae9; font-size: 13px;">Tamsulosin / Harnalidge / Flomax</div>
@@ -322,7 +376,7 @@ a{color:#127d76}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(21, 101, 192); padding: 12px 16px;">
+    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#ffffff">
       <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">適尿通/多適達</div>
       <div style="color: #bbdefb; font-size: 13px;">Finasteride / Proscar / Dutasteride</div>
@@ -345,7 +399,7 @@ a{color:#127d76}
   <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑&#65288;活路利淨&#12289;暢利淨&#65289;還是 5α 還原酶抑制劑&#65288;適尿通&#65289;&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color: #999999; font-size: small;">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"> 表一&#65306;活路利淨 vs. 暢利淨 vs. 適尿通 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
@@ -508,7 +562,7 @@ a{color:#127d76}
 </div>
 
 <span style="color: #222222;"><!--FAQ--></span>
-<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color: #999999; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">&#10067; 常見問題 FAQ</h2>
 
@@ -555,7 +609,7 @@ a{color:#127d76}
 </details>
 
 <span style="color: #222222;"><!--E-E-A-T 醫師簽名--></span>
-<div style="align-items: center; background: rgb(13, 27, 94); border-radius: 12px; color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 16px; margin: 32px 0px; padding: 20px 24px;">
+<div style="align-items: center; background: rgb(13, 27, 94); border-radius: 12px; color:#909090; display: flex; flex-wrap: wrap; font-size: 16px; gap: 16px; margin: 32px 0px; padding: 20px 24px;">
   <div style="flex: 0 0 auto;">
     <div style="align-items: center; background: rgb(26, 35, 126); border-radius: 50%; border: 3px solid rgb(92, 107, 192); color: white; display: flex; font-size: 24px; height: 72px; justify-content: center; width: 72px;"></div>
   </div>
@@ -575,7 +629,7 @@ a{color:#127d76}
   <p style="color: #283593; font-size: 14px; margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <a href="https://www.tmuh.org.tw/tmuh/web/Booking/index.html" style="background: rgb(26, 35, 126); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;"> 北醫門診線上預約</a>
-    <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;"> LINE @Dr.Andy 諮詢</a>
+    <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color:#333333; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;"> LINE @Dr.Andy 諮詢</a>
   </div>
 </div>
 
@@ -615,7 +669,7 @@ a{color:#127d76}
 <div style="-webkit-flex-wrap: wrap; color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 14px; margin-bottom: 28px;">
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(57, 73, 171); padding: 12px 16px;">
+    <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#ffffff">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;非選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Doxazosin</div>
     </div>
@@ -631,7 +685,7 @@ a{color:#127d76}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(40, 53, 147); padding: 12px 16px;">
+    <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#ffffff">
       <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;攝護腺選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Tamsulosin / Silodosin</div>
     </div>
@@ -647,7 +701,7 @@ a{color:#127d76}
   </div>
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
-    <div style="background: rgb(21, 101, 192); padding: 12px 16px;">
+    <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#ffffff">
       <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Finasteride / Dutasteride</div>
     </div>
@@ -669,7 +723,7 @@ a{color:#127d76}
   <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑還是 5α 還原酶抑制劑&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color: #999999; font-size: small;">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">📊 表一&#65306;非選擇性 α 阻斷劑 vs. 選擇性 α 阻斷劑 vs. 5α 還原酶抑制劑 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
@@ -825,7 +879,7 @@ a{color:#127d76}
   </div>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color: #999999; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f" style="margin-left: 1em; margin-right: 1em;color:#995842"><img alt="攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理" data-original-height="304" data-original-width="480" height="272" src="https://blogger.googleusercontent.com/img/a/AVvXsEisvCGlXbhUzaq1QoVswxpgfzmj6-S_NoDLzsL62G1e4L5b--yan2fuZpQxquN6faH0-n3SSxKvAeBmrEUR7VhuvL6-6TI7X9A8TPHuCBaP1UZ0qdEQEFjgG0O2WXOIphxAgJWOH3-x6TOvo0F3kh0XAV_uT0G-Z0gYbymKWkgZiqLJgrt5twP5XC-fKH-f=w429-h272" width="429" /></a></div><span style="color:#6b6b6b; font-weight: normal;">攝護腺體積過大壓迫尿道&#65292;造成急性尿滯留&#65292;患者完全排不出尿&#65292;需緊急插導尿管處理</span><br /></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">&#10067; 常見問題 FAQ</h2>
 
@@ -872,7 +926,7 @@ a{color:#127d76}
 </details>
 
 <!--E-E-A-T 醫師簽名-->
-<div style="-webkit-flex-wrap: wrap; align-items: center; background: rgb(13, 27, 94); border-radius: 12px; color: #222222; display: flex; flex-wrap: wrap; font-size: 16px; gap: 16px; margin: 32px 0px; padding: 20px 24px;">
+<div style="-webkit-flex-wrap: wrap; align-items: center; background: rgb(13, 27, 94); border-radius: 12px; color:#909090; display: flex; flex-wrap: wrap; font-size: 16px; gap: 16px; margin: 32px 0px; padding: 20px 24px;">
   <div style="flex: 0 0 auto;">
     <img alt="黃建榮醫師 臺北醫學大學附設醫院 泌尿科" src="data:image/jpeg;base64,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" style="border-radius: 50%; border: 3px solid rgb(92, 107, 192); flex-shrink: 0; height: 72px; object-fit: cover; object-position: center top; width: 72px;" />
   </div>
@@ -892,7 +946,7 @@ a{color:#127d76}
   <p style="color: #283593; font-size: 14px; margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
   <div style="-webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <a href="https://www.tmuh.org.tw/tmuh/web/Booking/index.html" style="background: rgb(26, 35, 126); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;">📅 北醫門診線上預約</a>
-    <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;">💬 LINE @Dr.Andy 諮詢</a>
+    <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color:#333333; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;">💬 LINE @Dr.Andy 諮詢</a>
   </div>
 </div>
 
@@ -902,9 +956,24 @@ a{color:#127d76}
 </div>
 
 </div>
-<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#c0c5ca;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;color:#1c1c1e"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#c0c5ca;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#c0c5ca;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>
+<section class="comments" id="comments" data-slug="bph-medication" hidden>
+<h3 class="title">留言</h3>
+<ol class="comment-list"></ol>
+<p class="comment-empty">載入留言中…</p>
+<form class="comment-form" novalidate>
+<label>暱稱<input name="name" maxlength="40" autocomplete="nickname" required></label>
+<label>留言內容<textarea name="body" rows="4" maxlength="2000" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="note">留言會公開顯示，請勿留下病歷、電話、身分證字號等個人資料；個別病情請至門診諮詢。</p>
+<button type="submit">張貼留言</button><span class="form-msg" role="status"></span>
+</form>
+</section>
+</main>
+</div>
+<script src="assets/engage.js" defer></script>
 </body>
 </html>

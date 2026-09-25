@@ -193,48 +193,102 @@
   }
  ]
 }</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap">
 <style>
 :root{color-scheme:light}
-body{margin:0;background:#fff;color:#1c1c1e;
- font-family:-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
- line-height:1.85;font-size:17px;-webkit-text-size-adjust:100%}
-.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
-h1{font-size:1.6rem;line-height:1.45;margin:.2em 0 .6em}
-h2{font-size:1.25rem;margin:2em 0 .6em;padding-left:.55em;border-left:5px solid #2fa8a0}
-h3{font-size:1.08rem;margin:1.5em 0 .5em}
-img{max-width:100%;height:auto;display:block;margin:1.2em auto;border-radius:10px}
-table{width:100%;border-collapse:collapse;margin:1.4em 0;font-size:.95rem}
-th,td{border:1px solid #e0e0e0;padding:.6em .7em;text-align:left;vertical-align:top}
-th{background:#f4faf9}
-a{color:#127d76}
-.meta{color:#6b6b70;font-size:.9rem;margin-bottom:1.8em;
- padding-bottom:1.2em;border-bottom:1px solid #eee}
-.back{display:inline-block;margin:2.5em 0 0;padding:.6em 1.2em;
- background:#2fa8a0;color:#fff;text-decoration:none;border-radius:8px}
-@media(max-width:600px){body{font-size:16px}.wrap{padding:18px 14px 48px}}
+body{margin:0;min-height:100vh;background-color:#eed7c2;color:#000;
+ font:400 16px Lato,sans-serif;-webkit-text-size-adjust:100%}
+a{color:#374561;text-decoration:none}
+.bg-photo-container{position:absolute;top:0;left:0;right:0;height:464px;overflow:hidden;z-index:0}
+.bg-photo{height:100%;background:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w800/messageImage_1778552726632.jpg) 50%/cover no-repeat}
+@media(min-width:801px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1200/messageImage_1778552726632.jpg)}}
+@media(min-width:1201px){.bg-photo{background-image:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRSjceR69U5DSHOG99DYQfLtech6xLWfzf6czkfbMT42QbbQxSDWFIw15CPlmgaKMkXHMJg80a9-aQFoeVXD9XfviIG1WO8wO2_aSsWJYWsujmJB8FiUG3Yyeg_hsEJud6QsasRSqYI7R4ksccmFRUQFUfW-Km6B28Gn72bSp1KMiMIap7LxdU_jdun0fQ/w1600/messageImage_1778552726632.jpg)}}
+.item .bg-photo{filter:blur(12px);transform:scale(1.05)}
+.topbar{position:sticky;top:0;z-index:10;background:#da7d5e;
+ box-shadow:0 0 20px 0 rgba(0,0,0,.2)}
+.topbar-in{max-width:1185px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:0 24px}
+.topbar a{color:#fff}
+.topbar .return{display:flex;padding:8px;margin-left:-8px}
+.topbar .return svg{width:24px;height:24px;fill:#fff}
+.brand{font:700 32px Lato,sans-serif;margin:16px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.page_body{position:relative;z-index:1;padding:102px 0 1em}
+.card{max-width:890px;margin:0 auto;background:#374561;color:#fff}
+.post{padding:32px}
+.post-title{margin:0;color:#fff;font:900 24px Lato,sans-serif;line-height:1.4}
+.byline{margin:6px 0 0;color:#fff;font:italic 400 12px Merriweather,Georgia,serif}
+.byline .views[hidden]{display:none}
+.post-body{margin-top:40px;color:#fff;font:400 16px Merriweather,Georgia,serif;line-height:32px;
+ overflow-wrap:break-word}
+.post-body h1,.post-body h2,.post-body h3,.post-body h4,.post-body h5,.post-body h6{color:inherit}
+.post-body a,.comments a{color:#da7d5e}
+.post-body img{max-width:100%;height:auto}
+.post-body table{max-width:100%;border-collapse:collapse}
+.post-body th,.post-body td{border:1px solid rgba(255,255,255,.25);padding:.4em .6em;vertical-align:top}
+.post-body blockquote{color:#eee;font-size:x-large;font-style:italic;font-weight:300;text-align:center}
+.back{display:inline-block;margin-top:40px;padding:8px 16px;background:#da7d5e;color:#fff!important;
+ font:500 14px Lato,sans-serif}
+.comments[hidden]{display:none}
+.comments{border-top:1px solid rgba(0,0,0,.12);padding:32px;color:#fff}
+.comments .title{margin:0 0 16px;font:900 18px Lato,sans-serif;color:#fff}
+.comment-list{list-style:none;margin:0 0 24px;padding:0}
+.comment{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.comment .who{font:700 14px Lato,sans-serif}
+.comment .who .owner{margin-left:6px;padding:1px 6px;background:#da7d5e;color:#fff;font-size:12px;font-weight:400}
+.comment .when{margin-left:8px;color:rgba(255,255,255,.6);font:italic 400 12px Merriweather,Georgia,serif}
+.comment .text{margin-top:6px;font:400 15px Merriweather,Georgia,serif;line-height:28px;white-space:pre-wrap;overflow-wrap:anywhere}
+.comment .replies{list-style:none;margin:8px 0 0 24px;padding:0 0 0 16px;border-left:2px solid #da7d5e}
+.comment .replies .comment{border:0;padding:8px 0}
+.comment-empty{color:rgba(255,255,255,.7);font:italic 400 14px Merriweather,Georgia,serif}
+.comment-form label{display:block;margin:0 0 12px;font:400 14px Lato,sans-serif}
+.comment-form input,.comment-form textarea{display:block;box-sizing:border-box;width:100%;margin-top:4px;
+ padding:10px 12px;border:0;border-radius:0;background:#fff;color:#1c1c1e;font:400 16px Lato,sans-serif}
+.comment-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.comment-form .note{margin:0 0 12px;color:rgba(255,255,255,.75);font:italic 400 12px Merriweather,Georgia,serif;line-height:20px}
+.comment-form button{padding:10px 20px;border:0;background:#da7d5e;color:#fff;font:500 14px Lato,sans-serif;
+ text-transform:uppercase;cursor:pointer}
+.comment-form button[disabled]{opacity:.6;cursor:default}
+.form-msg{margin-left:12px;font:400 14px Lato,sans-serif}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grid{max-width:1185px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;padding:0 15px}
+.tile{display:flex;flex-direction:column;justify-content:space-between;min-height:150px;padding:24px 16px;
+ background:#374561;color:#fff;transition:box-shadow .3s cubic-bezier(.4,0,.2,1)}
+.tile:hover{box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}
+.tile-title{font:900 16px Lato,sans-serif;line-height:24px;color:#fff}
+.tile .views{margin-top:16px;color:#da7d5e;font:italic 400 12px Merriweather,Georgia,serif}
+.tile .views[hidden]{display:none}
+@media(max-width:680px){
+ .topbar-in{padding:0 12px}.brand{font-size:20px;margin:14px 0}
+ .page_body{padding-top:70px}.post,.comments{padding:16px}
+ .post-body{margin-top:24px}}
 </style>
 </head>
-<body>
-<div class="wrap">
-<h1>攝護腺雷射手術 安全嗎&#65311;住院幾天&#65311;怎麼麻醉&#65311;</h1>
-<div class="meta">作者：黃建榮 醫師｜泌尿科</div>
-<article>
+<body class="item" data-slug="laser-safety-hospital">
+<div class="bg-photo-container" aria-hidden="true"><div class="bg-photo"></div></div>
+<header class="topbar"><div class="topbar-in"><a class="return" href="./" aria-label="回文章列表"><svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg></a><a class="brand" href="./">黃建榮醫師 泌尿科衛教</a></div></header>
+<div class="page_body">
+<main class="card">
+<div class="post">
+<h1 class="post-title">攝護腺雷射手術 安全嗎&#65311;住院幾天&#65311;怎麼麻醉&#65311;</h1>
+<div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="laser-safety-hospital" hidden></span></div>
+<article class="post-body">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
 
-<div style="background: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; margin: 0px auto; max-width: 860px; padding: 0px 0px 60px;">
+<div style="background: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; margin: 0px auto; max-width: 860px; padding: 0px 0px 60px;color:#1c1c1e">
 
 <span style="color: #222222;"><!--&#9552;&#9552;&#9552; HERO &#9552;&#9552;&#9552;--></span>
-<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 45%, rgb(26, 58, 107) 80%, rgb(30, 64, 128) 100%); overflow: hidden; padding: 52px 28px 44px; position: relative; text-align: center;">
-  <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%); border-radius: 50%; color: #222222; height: 220px; pointer-events: none; position: absolute; right: -50px; top: -50px; width: 220px;"></div>
-  <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%); border-radius: 50%; bottom: -40px; color: #222222; height: 160px; left: -40px; pointer-events: none; position: absolute; width: 160px;"></div>
+<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 45%, rgb(26, 58, 107) 80%, rgb(30, 64, 128) 100%); overflow: hidden; padding: 52px 28px 44px; position: relative; text-align: center;color:#ffffff">
+  <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 70%); border-radius: 50%; color:#bdbdbd; height: 220px; pointer-events: none; position: absolute; right: -50px; top: -50px; width: 220px;"></div>
+  <div style="background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%); border-radius: 50%; bottom: -40px; color:#a7a7a7; height: 160px; left: -40px; pointer-events: none; position: absolute; width: 160px;"></div>
 
-  <div style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96), rgb(212, 175, 55), rgb(160, 120, 32)) text; display: inline-block; font-weight: 700; letter-spacing: 5px; margin-bottom: 18px; text-transform: uppercase;"><span style="color: #ffe599;">高階泌尿外科 &#10022; 安全指南</span></div>
+  <div style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96), rgb(212, 175, 55), rgb(160, 120, 32)) text; display: inline-block; font-weight: 700; letter-spacing: 5px; margin-bottom: 18px; text-transform: uppercase;color:#1c1c1e"><span style="color:#332e1f;">高階泌尿外科 &#10022; 安全指南</span></div>
 
   <h1 style="color: #f0e8d0; font-size: clamp(22px,5vw,36px); font-weight: 700; line-height: 1.35; margin: 0px 0px 16px;">
     攝護腺雷射手術<br />
-    <span style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(212, 175, 55), rgb(240, 208, 96), rgb(200, 150, 12)) text;">安全嗎&#65311;住院幾天&#65311;怎麼</span><span style="background-color: initial;">麻醉</span><span style="background-color: initial;">&#65311;</span></h1><h1 style="color: #f0e8d0; font-size: clamp(22px,5vw,36px); font-weight: 700; line-height: 1.35; margin: 0px 0px 16px;"><span style="background-color: initial; color: rgba(240, 232, 208, 0.82); font-size: large;">術前最常問的四個問題&#65292;黃建榮醫師一次說清楚</span></h1>
+    <span style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(212, 175, 55), rgb(240, 208, 96), rgb(200, 150, 12)) text;color:#1c1c1e">安全嗎&#65311;住院幾天&#65311;怎麼</span><span style="background-color: initial;">麻醉</span><span style="background-color: initial;">&#65311;</span></h1><h1 style="color: #f0e8d0; font-size: clamp(22px,5vw,36px); font-weight: 700; line-height: 1.35; margin: 0px 0px 16px;"><span style="background-color: initial; color: rgba(240, 232, 208, 0.82); font-size: large;">術前最常問的四個問題&#65292;黃建榮醫師一次說清楚</span></h1>
 
-  <div style="color: #222222; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+  <div style="color:#a7a7a7; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">🔬 HoLEP / ThuLEP</span>
     <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">🏥 臺北醫學大學附設醫院</span>
     <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">👨&#8205;&#9877;&#65039; 黃建榮醫師</span>
@@ -291,7 +345,7 @@ a{color:#127d76}
 
 <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.15); color: #222222; margin-bottom: 8px; padding: 18px 20px;">
   <p style="color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 0px;">
-    💡 <strong style="color: #0d2347;">簡單說&#65306;</strong>攝護腺雷射手術是目前已知最微創&#12289;最不流血&#12289;恢復最快的攝護腺手術&#65292;非常適合高齡或有慢性病的患者&#12290;</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/s1264/Gemini_Generated_Image_qy89bmqy89bmqy89.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="847" data-original-width="1264" height="298" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/w446-h298/Gemini_Generated_Image_qy89bmqy89bmqy89.png" width="446" /></a></div><br />
+    💡 <strong style="color: #0d2347;">簡單說&#65306;</strong>攝護腺雷射手術是目前已知最微創&#12289;最不流血&#12289;恢復最快的攝護腺手術&#65292;非常適合高齡或有慢性病的患者&#12290;</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/s1264/Gemini_Generated_Image_qy89bmqy89bmqy89.png" style="margin-left: 1em; margin-right: 1em;color:#995842"><img border="0" data-original-height="847" data-original-width="1264" height="298" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/w446-h298/Gemini_Generated_Image_qy89bmqy89bmqy89.png" width="446" /></a></div><br />
   <p></p>
 </div>
 
@@ -306,15 +360,15 @@ a{color:#127d76}
 
 <span style="color: #222222;"><!--時間軸--></span>
 <div style="color: #222222; margin: 0px 0px 24px; padding-left: 28px; position: relative;">
-  <div style="background: linear-gradient(rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 2px; bottom: 0px; left: 10px; position: absolute; top: 0px; width: 2px;"></div>
+  <div style="background: linear-gradient(rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 2px; bottom: 0px; left: 10px; position: absolute; top: 0px; width: 2px;color:#ffffff"></div>
 
   <div style="margin-bottom: 22px; position: relative;">
-    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;"></div>
+    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#ffffff"></div>
     <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術前一天 / 當天</strong>
     <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">入院辦理&#12289;麻醉前評估&#12289;備皮&#65292;通常下午或隔天早上手術</p>
   </div>
   <div style="margin-bottom: 22px; position: relative;">
-    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;"></div>
+    <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#ffffff"></div>
     <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術當天</strong>
     <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">手術時間約 1&#8211;2 小時&#65292;術後放置尿管幫助膀胱沖洗&#65292;當天即可下床走動</p>
   </div>
@@ -410,7 +464,7 @@ a{color:#127d76}
   </div>
 </div>
 
-<div style="background: linear-gradient(135deg, rgb(13, 35, 71), rgb(26, 58, 107)); border-radius: 12px; color: #222222; margin-bottom: 8px; padding: 20px 22px;">
+<div style="background: linear-gradient(135deg, rgb(13, 35, 71), rgb(26, 58, 107)); border-radius: 12px; color:#a7a7a7; margin-bottom: 8px; padding: 20px 22px;">
   <p style="color: rgba(240, 232, 208, 0.9); font-size: clamp(14px,2.2vw,16px); line-height: 1.8; margin: 0px;">
     📅 <strong style="color: #d4af37;">典型時程&#65306;</strong>術後第 1 天拔尿管 &#8594; 測試排尿 &#8594; 第 2&#8211;3 天出院&#12290;若攝護腺體積較大&#12289;術後出血較多&#65292;可能需多觀察 1 天&#12290;
   </p>
@@ -472,7 +526,7 @@ a{color:#127d76}
 </details>
 
 <span style="color: #222222;"><!--CTA--></span>
-<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 50%, rgb(26, 58, 107) 100%); border-radius: 16px; color: #222222; margin: 44px 0px 0px; padding: 36px 24px; text-align: center;">
+<div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 50%, rgb(26, 58, 107) 100%); border-radius: 16px; color:#909090; margin: 44px 0px 0px; padding: 36px 24px; text-align: center;">
   <div style="color: #d4af37; font-size: 11px; font-weight: 700; letter-spacing: 4px; margin-bottom: 12px; text-transform: uppercase;">&#10022; 預約門診 &#10022;</div>
   <h3 style="color: #f0e8d0; font-size: clamp(17px,3.2vw,24px); line-height: 1.4; margin: 0px 0px 10px;">準備好想了解更多了嗎&#65311;</h3>
   <p style="color: rgba(240, 232, 208, 0.8); font-size: clamp(13px,2vw,15px); line-height: 1.7; margin: 0px auto 26px; max-width: 500px;">帶著您的超音波與尿流速報告&#65292;讓黃醫師為您量身評估最適合的手術方式&#12290;</p>
@@ -480,7 +534,7 @@ a{color:#127d76}
     <a href="https://www.tmuh.org.tw/tmuh/modules/index.php?mod=department&amp;sid=40" rel="noopener" style="background: linear-gradient(135deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96)); border-radius: 50px; box-shadow: rgba(212, 175, 55, 0.4) 0px 4px 16px; color: #0a1628; display: inline-block; font-size: clamp(13px,2vw,15px); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
       🏥 臺北醫學大學附設醫院門診預約
     </a>
-    <a href="https://line.me/R/ti/p/@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(6, 199, 85, 0.3) 0px 4px 16px; color: white; display: inline-block; font-size: clamp(13px,2vw,15px); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
+    <a href="https://line.me/R/ti/p/@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(6, 199, 85, 0.3) 0px 4px 16px; color:#333333; display: inline-block; font-size: clamp(13px,2vw,15px); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
       💬 LINE 諮詢 @Dr.Andy
     </a>
   </div>
@@ -489,7 +543,7 @@ a{color:#127d76}
 <span style="color: #222222;"><!--醫師簽名--></span>
 <div style="border-top: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-top: 44px; padding-top: 28px;">
   <div style="align-items: flex-start; display: flex; flex-wrap: wrap; gap: 18px;">
-    <div style="align-items: center; background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 50%; display: flex; flex-shrink: 0; height: 66px; justify-content: center; width: 66px;">
+    <div style="align-items: center; background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107), rgb(212, 175, 55)); border-radius: 50%; display: flex; flex-shrink: 0; height: 66px; justify-content: center; width: 66px;color:#ffffff">
       <span style="color: white; font-size: 24px;">👨&#8205;&#9877;&#65039;</span>
     </div>
     <div style="flex: 1 1 0%; min-width: 200px;">
@@ -497,7 +551,7 @@ a{color:#127d76}
       <div style="color: #1a3a6b; font-size: clamp(12px,1.8vw,14px); margin-bottom: 8px;">臺北醫學大學附設醫院 泌尿科</div>
       <div style="color: #555555; font-size: clamp(12px,1.8vw,13px); line-height: 1.8;">
         專長&#65306;HoLEP&#65295;ThuLEP 高階攝護腺雷射手術&#12539;大體積攝護腺剜除術&#12539;RIRS 軟式輸尿管鏡取石&#12539;達文西機械手臂泌尿外科手術<br />
-        <span style="color: #9aafcc;">具哈佛大學體系頂尖醫學中心微創研究背景</span>
+        <span style="color:#5c697a;">具哈佛大學體系頂尖醫學中心微創研究背景</span>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
         <a href="./" rel="noopener" style="background: rgba(26, 58, 107, 0.08); border-radius: 20px; color: #1a3a6b; font-size: 12px; padding: 4px 12px; text-decoration: none;" target="_blank">🔬 doctor-laser.blogspot.com</a>
@@ -519,9 +573,24 @@ a{color:#127d76}
 
 </div><span style="color: #222222;"><!--/padding wrapper--></span>
 </div><!--/main wrapper-->
-<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color: #1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;color:#1c1c1e"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color:#c0c5ca; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color:#8cb9d4;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color:#8cb9d4;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color:#8cb9d4;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#8cb9d4;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#8cb9d4;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color:#c0c5ca; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#8cb9d4; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#8cb9d4; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#8cb9d4; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#8cb9d4; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#b8b8b8; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>
+<section class="comments" id="comments" data-slug="laser-safety-hospital" hidden>
+<h3 class="title">留言</h3>
+<ol class="comment-list"></ol>
+<p class="comment-empty">載入留言中…</p>
+<form class="comment-form" novalidate>
+<label>暱稱<input name="name" maxlength="40" autocomplete="nickname" required></label>
+<label>留言內容<textarea name="body" rows="4" maxlength="2000" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p class="note">留言會公開顯示，請勿留下病歷、電話、身分證字號等個人資料；個別病情請至門診諮詢。</p>
+<button type="submit">張貼留言</button><span class="form-msg" role="status"></span>
+</form>
+</section>
+</main>
+</div>
+<script src="assets/engage.js" defer></script>
 </body>
 </html>
