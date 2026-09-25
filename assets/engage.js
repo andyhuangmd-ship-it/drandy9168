@@ -1,7 +1,7 @@
-/* drandy9168.com：觀看數＋留言板（後端在 worker/，同網域 /api） */
+/* drandy9168.com：觀看數＋留言板（後端在 worker/，部署於 api.drandy9168.com） */
 (function () {
   "use strict";
-  var API = window.DRANDY_API || "/api";
+  var API = window.DRANDY_API || (/drandy9168\.com$/.test(location.hostname) ? "https://api.drandy9168.com/api" : "/api");
   var VIEW_GAP_MS = 30 * 60 * 1000;   // 同一個人 30 分鐘內重整不重複算
 
   function $(sel, root) { return (root || document).querySelector(sel); }

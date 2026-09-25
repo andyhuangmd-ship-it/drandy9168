@@ -40,7 +40,7 @@ button.warn{background:#b3261e}button.ok{background:#2e7d32}button.alt{backgroun
 </main>
 <script>
 (function () {
-  var API = window.DRANDY_API || "/api", status = "pending", token = "";
+  var API = window.DRANDY_API || (/drandy9168\.com$/.test(location.hostname) ? "https://api.drandy9168.com/api" : "/api"), status = "pending", token = "";
   try { token = sessionStorage.getItem("adm") || ""; } catch (e) {}
   var $ = function (s) { return document.querySelector(s); };
 
