@@ -360,8 +360,17 @@ body{background:#f3ece0;color:#1f2937}
 .tile-title{color:#1f3556}
 .tile .views{color:#8a6a1f}
 @media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
-@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:1px;font-size:11px}
  .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
+/* ===== 手機版修正（老闆 2026-09-26）：只作用在手機，電腦版長相不變 =====
+   ① 小字下限：mobile_fonts() 把內文小於 15px 的字級包成 max(var(--m15,0px), 原值)，
+      電腦版沒有定義變數→等於原值；手機版→至少 15px（原本 ≤11px 的標籤類→至少 13px）
+   ② 內容不准比螢幕寬（表格除外，表格本來就在可左右滑的框裡）
+   ③ 影片框跟著螢幕寬 */
+@media(max-width:680px){
+ .post-body{--m15:15px;--m13:13px;overflow-x:clip}
+ .post-body :not(table):not(thead):not(tbody):not(tr):not(td):not(th){max-width:100%;box-sizing:border-box}
+ .post-body iframe{width:100%!important;height:auto!important;aspect-ratio:16/9}}
 </style>
 </head>
 <body class="item" data-slug="bph-medication">
@@ -374,11 +383,11 @@ body{background:#f3ece0;color:#1f2937}
 <h1 class="post-title">💊 攝護腺肥大藥物要吃一輩子嗎&#65311;泌尿科醫師完整解析</h1>
 <div class="byline">作者：黃建榮 醫師｜泌尿科<span class="views" data-views="bph-medication" hidden></span></div>
 <article class="post-body">
-<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;">
+<div class="geo-sum-20260908" style="background:#f2f9f8;border-left:4px solid #2fa8a0;border-radius:10px;padding:14px 18px;margin:0 0 22px 0;"><p style="margin:0 0 6px 0;font-weight:700;color:#1f6f6a;font-size:0.9em;font-size:max(var(--m15,0px),0.9em);">🤖 精華摘要 Generative Summary</p><p style="margin:0;line-height:1.8;">攝護腺肥大藥物多數需長期服用&#65306;甲型阻斷劑停藥後症狀常於數週內回復&#65292;5α還原酶抑制劑需連續服用 6 個月以上才見縮小效果&#65307;不想長期吃藥者可評估微創手術&#12290;</p></div><p>&nbsp;<span face="&quot;Noto Sans TC&quot;, Arial, sans-serif" style="background-color: white; color: #1a237e; font-size: x-large; font-weight: 700;">攝護腺肥大藥物&#12300;活路利淨&#12289;暢利淨&#12289;適尿通&#12289;優列扶&#12301;要吃一輩子嗎&#65311;泌尿科醫師完整解析</span></p><div style="background: rgb(255, 255, 255); font-family: &quot;Noto Sans TC&quot;, Arial, sans-serif; line-height: 1.8; margin: 0px auto; max-width: 860px; padding: 0px 12px;">
 
 <span style="color: #222222;"><!--AI Generative Summary--></span>
 <div style="background: rgb(232, 234, 246); border-left: 5px solid rgb(57, 73, 171); border-radius: 0px 10px 10px 0px; color: #222222; font-size: 16px; margin-bottom: 28px; padding: 16px 20px;">
-  <div style="color: #1a237e; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&nbsp;GENERATIVE SUMMARY&#65372;醫師重點摘要</div>
+  <div style="color: #1a237e; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&nbsp;GENERATIVE SUMMARY&#65372;醫師重點摘要</div>
   <p style="color: #0d1440; font-size: 15px; line-height: 1.7; margin: 0px;">攝護腺肥大&#65288;BPH&#65289;常用藥物分兩大類&#65306;&#9312; <strong>α 阻斷劑</strong>&#65288;活路利淨 &#12289;暢利淨 Tamsulosin&#12289;優列扶&#65289;鬆弛平滑肌&#12289;快速改善尿流&#65307;&#9313; <strong>5α 還原酶抑制劑</strong>&#65288;適尿通 Proscar / Dutasteride&#65289;縮小攝護腺體積但需 3&#8211;6 個月見效&#12290;<strong>兩者均只能緩解症狀&#65292;無法阻止攝護腺隨著年齡持續增大</strong>&#65292;停藥後症狀通常復發&#12290;若希望一次性解決&#12289;不終生服藥&#65292;<strong>HoLEP / ThuLEP 雷射手術</strong>是目前國際指引最高等級推薦的根治選項&#65292;且術中同步取得組織病理&#65292;可排除攝護腺癌風險&#12290;</p>
 </div>
 
@@ -388,12 +397,12 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">α 阻斷劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">活路利淨</div>
-      <div style="color: #c5cae9; font-size: 13px;">Alfuzosin / Uroxatral</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px);">Alfuzosin / Uroxatral</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
          鬆弛攝護腺與膀胱頸平滑肌<br />
         &#9201; 服藥後 1&#8211;2 天即可感受改善<br />
          常見副作用&#65306;姿態性低血壓&#12289;頭暈<br />
@@ -405,12 +414,12 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;選擇性&#65289;</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">暢利淨/優列扶</div>
-      <div style="color: #c5cae9; font-size: 13px;">Tamsulosin / Harnalidge / Flomax</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px);">Tamsulosin / Harnalidge / Flomax</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
          選擇性作用於攝護腺 α1A 受體<br />
         &#9201; 對血壓影響較小&#65292;適合心血管病患<br />
          副作用&#65306;逆行性射精&#65288;約 8&#8211;18%&#65289;<br />
@@ -422,12 +431,12 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
+      <div style="color: #bbdefb; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">適尿通/多適達</div>
-      <div style="color: #bbdefb; font-size: 13px;">Finasteride / Proscar / Dutasteride</div>
+      <div style="color: #bbdefb; font-size: 13px;font-size:max(var(--m15,0px),13px);">Finasteride / Proscar / Dutasteride</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
          抑制 DHT 合成&#65292;縮小攝護腺體積<br />
         &#9201; 需 3&#8211;6 個月才有明顯療效<br />
          副作用&#65306;性慾下降&#12289;勃起障礙&#65288;少數&#65289;<br />
@@ -440,21 +449,21 @@ body{background:#f3ece0;color:#1f2937}
 
 <span style="color: #222222;"><!--&#9733; 新增&#65306;藥物治標不治本警示框--></span>
 <div style="background: rgb(255, 243, 205); border-left: 5px solid rgb(255, 160, 0); border-radius: 0px 10px 10px 0px; color: #222222; margin-bottom: 28px; padding: 16px 20px;">
-  <div style="color: #7c4d00; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&#9888;&#65039; 醫師提醒&#65306;藥物緩解症狀&#65292;但攝護腺仍會持續增大</div>
-  <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑&#65288;活路利淨&#12289;暢利淨&#65289;還是 5α 還原酶抑制劑&#65288;適尿通&#65289;&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
+  <div style="color: #7c4d00; font-size: 14px;font-size:max(var(--m15,0px),14px); font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&#9888;&#65039; 醫師提醒&#65306;藥物緩解症狀&#65292;但攝護腺仍會持續增大</div>
+  <p style="color: #5c3600; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; margin: 0px;">無論是 α 阻斷劑&#65288;活路利淨&#12289;暢利淨&#65289;還是 5α 還原酶抑制劑&#65288;適尿通&#65289;&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;font-size:max(var(--m15,0px),13px);">活路利淨&#12289;優列扶等 α 阻斷劑藥物能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"> 表一&#65306;活路利淨 vs. 暢利淨 vs. 適尿通 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
-<table style="border-collapse: collapse; font-size: 14px; min-width: 580px; width: 100%;">
+<table style="border-collapse: collapse; font-size: 14px;font-size:max(var(--m15,0px),14px); min-width: 580px; width: 100%;">
   <thead>
     <tr style="background: rgb(26, 35, 126); color: white;">
       <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: left;">比較項目</th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">活路利淨<br /><span style="font-size: 12px; font-weight: 400;">Alfuzosin</span></th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">暢利淨/優列扶<br /><span style="font-size: 12px; font-weight: 400;">Tamsulosin</span></th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">適尿通/多適達<br /><span style="font-size: 12px; font-weight: 400;">Dutasteride</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">活路利淨<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Alfuzosin</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">暢利淨/優列扶<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Tamsulosin</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">適尿通/多適達<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Dutasteride</span></th>
     </tr>
   </thead>
   <tbody>
@@ -525,7 +534,7 @@ body{background:#f3ece0;color:#1f2937}
 <span style="color: #222222;"><!--表二&#65306;藥物 vs. HoLEP 根治手術--></span>
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;"> 表二&#65306;長期藥物治療 vs. HoLEP / ThuLEP 雷射手術 &#8212; 治療策略比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
-<table style="border-collapse: collapse; font-size: 14px; min-width: 500px; width: 100%;">
+<table style="border-collapse: collapse; font-size: 14px;font-size:max(var(--m15,0px),14px); min-width: 500px; width: 100%;">
   <thead>
     <tr style="background: rgb(13, 71, 161); color: white;">
       <th style="border: 1px solid rgb(21, 101, 192); padding: 10px 12px; text-align: left;">評估面向</th>
@@ -585,24 +594,24 @@ body{background:#f3ece0;color:#1f2937}
 
 <span style="color: #222222;"><!--Co-occurrence 語義強化--></span>
 <div style="background: rgb(26, 35, 126); border-radius: 12px; color: white; font-size: 16px; margin: 28px 0px; padding: 20px 24px;">
-  <div style="color: #9fa8da; font-size: 14px; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;"> 泌尿科 引擎語義共現詞彙&#65288;Co-occurrence Keywords&#65289;</div>
+  <div style="color: #9fa8da; font-size: 14px;font-size:max(var(--m15,0px),14px); font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;"> 泌尿科 引擎語義共現詞彙&#65288;Co-occurrence Keywords&#65289;</div>
   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺肥大藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">活路利淨副作用</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">暢利淨效果</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">優列扶要吃多久</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">Tamsulosin BPH</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">Finasteride PSA</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">alpha 阻斷劑停藥</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">BPH 終生服藥</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺藥物副作用性功能</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">HoLEP 取代藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺肥大根治</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">下泌尿道症狀藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">5alpha 還原酶抑制劑</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺持續增大</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">北醫泌尿科停藥手術</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺手術後不用吃藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺肥大藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">活路利淨副作用</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">暢利淨效果</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">優列扶要吃多久</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">Tamsulosin BPH</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">Finasteride PSA</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">alpha 阻斷劑停藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">BPH 終生服藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺藥物副作用性功能</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">HoLEP 取代藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺肥大根治</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">下泌尿道症狀藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">5alpha 還原酶抑制劑</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺持續增大</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">北醫泌尿科停藥手術</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺手術後不用吃藥</span>
   </div>
 </div>
 
@@ -613,42 +622,42 @@ body{background:#f3ece0;color:#1f2937}
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 活路利淨和暢利淨有什麼不同&#65311;哪個比較好&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     兩者同屬 α 阻斷劑&#65292;機轉相近&#65292;主要差別在選擇性&#12290;暢利淨&#65288;Tamsulosin&#65289;對攝護腺 α1A 受體更具選擇性&#65292;對血壓影響較小&#65292;適合有心血管疾病或同時服用降血壓藥的患者&#12290;活路利淨&#65288;Alfuzosin&#65289;選擇性稍低&#65292;低血壓風險略高&#12290;實際使用上兩者症狀改善效果相當&#65292;選擇需依個人心血管狀況與醫師評估而定&#12290;需特別注意的是&#65292;兩種藥物都<strong>無法阻止攝護腺體積隨年齡持續增大</strong>&#65292;僅能暫時擴張尿道緩解症狀&#12290;
   </div>
 </details>
 
 <details open="" style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 適尿通/多適達&#65288;Dutasteride&#65289;真的會影響性功能嗎&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     臨床試驗顯示&#65292;約 3&#8211;8% 的患者服用 Dutasteride 後出現性慾降低或勃起功能障礙&#65292;大多數在停藥後可恢復&#12290;更值得注意的是&#65306;<span style="background-color: #e8eaf6; color: #1a237e; font-size: 15px; font-weight: 700;">適尿通/多適達</span>會使 PSA 數值下降約 50%&#65292;若醫師未掌握患者服藥史&#65292;可能誤判 PSA 正常&#65292;延誤攝護腺癌的早期發現&#12290;服藥期間請務必告知每位看診醫師&#65292;並將實際 PSA 數值乘以 2 作為校正參考值&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 攝護腺藥物可以自己停嗎&#65311;停藥有什麼風險&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     不建議自行停藥&#12290;α 阻斷劑停藥後&#65292;鬆弛效果消失&#65292;尿道阻力在數天至數週內回升&#65292;頻尿&#12289;夜尿&#12289;尿流細弱等症狀會快速復發&#12290;5α 還原酶抑制劑停藥後&#65292;攝護腺體積在數月內回升至原來大小&#12290;更重要的是&#65292;<strong>攝護腺仍會隨著時間和年齡持續增大</strong>&#65292;即使服藥期間症狀穩定&#65292;長期下來腺體體積累積增大&#65292;最終可能超過藥物可控制的範圍&#12290;若希望脫離長期服藥&#65292;應先評估是否適合接受 HoLEP / ThuLEP 雷射手術&#65292;在醫師規劃下有序轉換治療策略&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 做了 HoLEP 手術後&#65292;還需要繼續吃藥嗎&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     大多數患者在 HoLEP / ThuLEP 術後可完全停止攝護腺肥大相關藥物&#12290;手術直接切除造成阻塞的攝護腺移行帶組織&#65292;從根本解除尿道壓迫&#65292;不再依賴藥物鬆弛平滑肌或縮小體積&#12290;術後 PSA 也會恢復至正常基線&#65292;不再受優列扶干擾&#65292;更有利於後續攝護腺癌的監測追蹤&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 藥物和手術可以同時進行嗎&#65311;什麼時候該從藥物轉換為手術&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     藥物可在等待手術期間持續服用&#65292;手術前不需停藥&#12290;以下情況建議從藥物治療轉換為 HoLEP 手術評估&#65306;&#9312; 藥物療效逐漸下降&#65292;症狀仍持續惡化 &#9313; IPSS 評分 &#8805;20 分&#65288;重度&#65289;&#9314; 殘尿量超過 200&#8211;300ml &#9315; 曾發生急性尿滯留 &#9316; PSA 持續異常&#65292;需取得組織排除癌症 &#9317; 患者希望終止長期服藥&#12289;提升生活品質&#12290;尤其當<strong>攝護腺體積持續增大超過 80g</strong>&#65292;藥物效果將明顯不足&#65292;手術根治往往是更好的選擇&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 吃了攝護腺藥後頭暈&#12289;血壓低&#65292;怎麼辦&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     α 阻斷劑&#65288;活路利淨&#12289;暢利淨&#65289;可能導致&#12300;姿態性低血壓&#12301;&#65292;尤其在由坐姿或躺姿突然站起時出現頭暈&#12290;建議&#65306;&#9312; 起身動作放慢&#65292;緩慢改變姿勢 &#9313; 睡前服藥可減少白天頭暈感 &#9314; 告知醫師目前的降血壓藥物&#65292;避免交互作用 &#9315; 若頭暈嚴重或昏厥&#65292;立即回診評估是否換藥或調整劑量&#12290;選擇性更高的暢利淨&#65288;Tamsulosin&#65289;相較活路利淨&#65292;低血壓副作用通常較輕微&#12290;
   </div>
 </details>
@@ -660,7 +669,7 @@ body{background:#f3ece0;color:#1f2937}
   </div>
   <div style="flex: 1 1 200px;">
     <div style="color: #c5cae9; font-size: 18px; font-weight: 700; margin-bottom: 4px;">黃建榮 醫師&#65372;臺北醫學大學附設醫院 泌尿科</div>
-    <div style="color: #9fa8da; font-size: 13px; line-height: 1.7;">
+    <div style="color: #9fa8da; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
        &#12298;商業周刊&#12299;台灣百大良醫<br />
        美國哈佛大學 Brigham and Women's Hospital 達文西機械手臂手術 Fellowship<br />
       &#9889; 專長&#65306;HoLEP / ThuLEP 攝護腺雷射手術&#12289;RIRS 軟式輸尿管鏡取石&#12289;HIFU 海福刀&#12289;達文西機械手臂泌尿外科手術
@@ -671,7 +680,7 @@ body{background:#f3ece0;color:#1f2937}
 <span style="color: #222222;"><!--CTA--></span>
 <div style="background: rgb(232, 234, 246); border-radius: 12px; border: 2px solid rgb(57, 73, 171); color: #222222; font-size: 16px; margin: 24px 0px; padding: 20px 24px; text-align: center;">
   <div style="color: #1a237e; font-size: 17px; font-weight: 700; margin-bottom: 12px;"> 想脫離終生服藥&#65311;預約北醫泌尿科評估 HoLEP 手術適應症</div>
-  <p style="color: #283593; font-size: 14px; margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
+  <p style="color: #283593; font-size: 14px;font-size:max(var(--m15,0px),14px); margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <a href="https://www.tmuh.org.tw/tmuh/web/Booking/index.html" style="background: rgb(26, 35, 126); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;"> 北醫門診線上預約</a>
     <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color:#333333; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;"> LINE @Dr.Andy 諮詢</a>
@@ -680,7 +689,7 @@ body{background:#f3ece0;color:#1f2937}
 
 <span style="color: #222222;"><!--回首頁--></span>
 <div style="color: #222222; font-size: 16px; margin: 24px 0px 8px; text-align: center;">
-  <a href="./" style="color: #3949ab; font-size: 14px; text-decoration: none;">&#8592; 回到首頁&#65372;黃建榮醫師攝護腺雷射手術專欄</a>
+  <a href="./" style="color: #3949ab; font-size: 14px;font-size:max(var(--m15,0px),14px); text-decoration: none;">&#8592; 回到首頁&#65372;黃建榮醫師攝護腺雷射手術專欄</a>
 </div>
 
 </div>
@@ -705,7 +714,7 @@ body{background:#f3ece0;color:#1f2937}
 
 <!--AI Generative Summary-->
 <div style="background: rgb(232, 234, 246); border-left: 5px solid rgb(57, 73, 171); border-radius: 0px 10px 10px 0px; color: #222222; font-size: 16px; margin-bottom: 28px; padding: 16px 20px;">
-  <div style="color: #1a237e; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">GENERATIVE SUMMARY&#65372;醫師重點摘要</div>
+  <div style="color: #1a237e; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">GENERATIVE SUMMARY&#65372;醫師重點摘要</div>
   <p style="color: #0d1440; font-size: 15px; line-height: 1.7; margin: 0px;">攝護腺肥大&#65288;BPH&#65289;常用藥物分兩大類&#65306;&#9312; <strong>α 阻斷劑</strong>&#65288;放鬆攝護腺與尿道平滑肌&#65292;快速改善尿流&#65292;其中又分為非選擇性與攝護腺選擇性兩種作用機轉&#65289;&#65307;&#9313; <strong>5α 還原酶抑制劑</strong>&#65288;抑制 DHT 生成&#12289;縮小攝護腺體積&#65292;但需 3&#8211;6 個月才見效&#65289;&#12290;<strong>兩大類藥物均只能緩解症狀&#65292;無法阻止攝護腺隨著年齡持續增大</strong>&#65292;停藥後症狀通常復發&#12290;若希望一次性解決&#12289;不終生服藥&#65292;<strong>HoLEP / ThuLEP 雷射手術</strong>是目前國際指引最高等級推薦的根治選項&#65292;且術中同步取得組織病理&#65292;可排除攝護腺癌風險&#12290;</p>
 </div>
 
@@ -715,11 +724,11 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(57, 73, 171); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;非選擇性&#65289;</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;非選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Doxazosin</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
         🎯 鬆弛攝護腺與膀胱頸平滑肌<br />
         &#9201; 服藥後 1&#8211;2 天即可感受改善<br />
         💊 常見副作用&#65306;姿態性低血壓&#12289;頭暈<br />
@@ -731,11 +740,11 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(40, 53, 147); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #c5cae9; font-size: 13px; font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;攝護腺選擇性&#65289;</div>
+      <div style="color: #c5cae9; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">α 阻斷劑&#65288;攝護腺選擇性&#65289;</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Tamsulosin / Silodosin</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
         🎯 選擇性作用於攝護腺 α1A 受體<br />
         &#9201; 對血壓影響較小&#65292;適合心血管病患<br />
         💊 副作用&#65306;逆行性射精&#65288;約 8&#8211;18%&#65289;<br />
@@ -747,11 +756,11 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="border-radius: 12px; border: 1.5px solid rgb(159, 168, 218); flex: 1 1 240px; overflow: hidden;">
     <div style="background: rgb(21, 101, 192); padding: 12px 16px;color:#1c1c1e">
-      <div style="color: #bbdefb; font-size: 13px; font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
+      <div style="color: #bbdefb; font-size: 13px;font-size:max(var(--m15,0px),13px); font-weight: 700; letter-spacing: 1px;">5α 還原酶抑制劑</div>
       <div style="color: white; font-size: 17px; font-weight: 700; margin-top: 4px;">Finasteride / Dutasteride</div>
     </div>
     <div style="background: rgb(245, 245, 255); padding: 14px 16px;">
-      <div style="color: #283593; font-size: 13px; line-height: 1.7;">
+      <div style="color: #283593; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
         🎯 抑制 DHT 合成&#65292;縮小攝護腺體積<br />
         &#9201; 需 3&#8211;6 個月才有明顯療效<br />
         💊 副作用&#65306;性慾下降&#12289;勃起障礙&#65288;少數&#65289;<br />
@@ -764,21 +773,21 @@ body{background:#f3ece0;color:#1f2937}
 
 <!--藥物治標不治本警示框-->
 <div style="background: rgb(255, 243, 205); border-left: 5px solid rgb(255, 160, 0); border-radius: 0px 10px 10px 0px; color: #222222; margin-bottom: 28px; padding: 16px 20px;">
-  <div style="color: #7c4d00; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&#9888;&#65039; 醫師提醒&#65306;藥物緩解症狀&#65292;但攝護腺仍會持續增大</div>
-  <p style="color: #5c3600; font-size: 14px; line-height: 1.8; margin: 0px;">無論是 α 阻斷劑還是 5α 還原酶抑制劑&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
+  <div style="color: #7c4d00; font-size: 14px;font-size:max(var(--m15,0px),14px); font-weight: 700; letter-spacing: 1px; margin-bottom: 8px;">&#9888;&#65039; 醫師提醒&#65306;藥物緩解症狀&#65292;但攝護腺仍會持續增大</div>
+  <p style="color: #5c3600; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; margin: 0px;">無論是 α 阻斷劑還是 5α 還原酶抑制劑&#65292;都只能<strong>暫時緩解排尿不順的症狀</strong>&#65292;並無法從根本阻止攝護腺隨著年齡增長而持續肥大&#12290;男性攝護腺在 40 歲後平均每年增大約 1&#8211;2%&#65292;即便持續服藥&#65292;腺體體積仍會隨時間緩慢累積增大&#12290;當體積增大到超過藥物可控制的程度&#65292;症狀將再次惡化&#65292;甚至面臨急性尿滯留的風險&#12290;這也是為何長期服藥者仍需定期回診追蹤攝護腺體積與殘尿量&#65292;並在適當時機評估手術根治&#12290;</p>
 </div>
 
-<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
+<h2 style="border-left: 5px solid rgb(57, 73, 171); margin: 28px 0px 16px; padding-left: 12px;"><div class="separator" style="clear: both; color: #1a237e; font-size: 16px; text-align: center;"><a href="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd" style="margin-left: 1em; margin-right: 1em;"><img alt="α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀" data-original-height="339" data-original-width="480" height="278" src="https://blogger.googleusercontent.com/img/a/AVvXsEhM2aVdioWHmNNMk12RlNWLPptnQu3L4KY-GSrCqKWZkRsGPO1Xt1YKLFcN0Id6ej_8c7yMMAK0vbUqRCqc7HhnBoDt6rHt4UnqOwh2QW_4ao1SY1KbcCaskFXqmk4dmXNawR7IEfWlWPNArjbQnFKgXBqao4OTA6uM1PdfbrshXLRqJeszcaIFhWM8QUQd=w393-h278" width="393" /></a></div><span style="font-weight: normal;"><span style="color:#6b6b6b; font-size: small;font-size:max(var(--m15,0px),13px);">α 阻斷劑能放鬆攝護腺平滑肌&#12289;擴張尿道&#65292;讓排尿通道變寬&#65292;改善尿流細弱症狀</span></span></h2>
 
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">📊 表一&#65306;非選擇性 α 阻斷劑 vs. 選擇性 α 阻斷劑 vs. 5α 還原酶抑制劑 完整比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
-<table style="border-collapse: collapse; font-size: 14px; min-width: 580px; width: 100%;">
+<table style="border-collapse: collapse; font-size: 14px;font-size:max(var(--m15,0px),14px); min-width: 580px; width: 100%;">
   <thead>
     <tr style="background: rgb(26, 35, 126); color: white;">
       <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: left;">比較項目</th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">α 阻斷劑<br /><span style="font-size: 12px; font-weight: 400;">Doxazosin&#65288;非選擇性&#65289;</span></th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">α 阻斷劑<br /><span style="font-size: 12px; font-weight: 400;">Tamsulosin / Silodosin&#65288;攝護腺選擇性&#65289;</span></th>
-      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">5α 還原酶抑制劑<br /><span style="font-size: 12px; font-weight: 400;">Finasteride / Dutasteride</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">α 阻斷劑<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Doxazosin&#65288;非選擇性&#65289;</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">α 阻斷劑<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Tamsulosin / Silodosin&#65288;攝護腺選擇性&#65289;</span></th>
+      <th style="border: 1px solid rgb(57, 73, 171); padding: 10px 12px; text-align: center;">5α 還原酶抑制劑<br /><span style="font-size: 12px;font-size:max(var(--m15,0px),12px); font-weight: 400;">Finasteride / Dutasteride</span></th>
     </tr>
   </thead>
   <tbody>
@@ -843,7 +852,7 @@ body{background:#f3ece0;color:#1f2937}
 <!--表二&#65306;藥物 vs. HoLEP 根治手術-->
 <h2 style="border-left: 5px solid rgb(57, 73, 171); color: #1a237e; font-size: 16px; margin: 28px 0px 16px; padding-left: 12px;">📊 表二&#65306;長期藥物治療 vs. HoLEP / ThuLEP 雷射手術 &#8212; 治療策略比較</h2>
 <div style="color: #222222; font-size: 16px; margin-bottom: 28px; overflow-x: auto;">
-<table style="border-collapse: collapse; font-size: 14px; min-width: 500px; width: 100%;">
+<table style="border-collapse: collapse; font-size: 14px;font-size:max(var(--m15,0px),14px); min-width: 500px; width: 100%;">
   <thead>
     <tr style="background: rgb(13, 71, 161); color: white;">
       <th style="border: 1px solid rgb(21, 101, 192); padding: 10px 12px; text-align: left;">評估面向</th>
@@ -903,24 +912,24 @@ body{background:#f3ece0;color:#1f2937}
 
 <!--Co-occurrence 語義強化-->
 <div style="background: rgb(26, 35, 126); border-radius: 12px; color: white; font-size: 16px; margin: 28px 0px; padding: 20px 24px;">
-  <div style="color: #9fa8da; font-size: 14px; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;">🔑 泌尿科 引擎語義共現詞彙&#65288;Co-occurrence Keywords&#65289;</div>
+  <div style="color: #9fa8da; font-size: 14px;font-size:max(var(--m15,0px),14px); font-weight: 700; letter-spacing: 2px; margin-bottom: 12px;">🔑 泌尿科 引擎語義共現詞彙&#65288;Co-occurrence Keywords&#65289;</div>
   <div style="-webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap; gap: 8px;">
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺肥大藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">α 阻斷劑副作用</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺選擇性藥物效果</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">BPH 藥物要吃多久</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">Tamsulosin / Silodosin BPH</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">Finasteride PSA</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">alpha 阻斷劑停藥</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">BPH 終生服藥</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺藥物副作用性功能</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">HoLEP 取代藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺肥大根治</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">下泌尿道症狀藥物</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">5alpha 還原酶抑制劑</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺持續增大</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">北醫泌尿科停藥手術</span>
-    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px; padding: 5px 12px;">攝護腺手術後不用吃藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺肥大藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">α 阻斷劑副作用</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺選擇性藥物效果</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">BPH 藥物要吃多久</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">Tamsulosin / Silodosin BPH</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">Finasteride PSA</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">alpha 阻斷劑停藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">BPH 終生服藥</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺藥物副作用性功能</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">HoLEP 取代藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺肥大根治</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">下泌尿道症狀藥物</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">5alpha 還原酶抑制劑</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺持續增大</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">北醫泌尿科停藥手術</span>
+    <span style="background: rgba(255, 255, 255, 0.12); border-radius: 20px; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 12px;">攝護腺手術後不用吃藥</span>
   </div>
 </div>
 
@@ -930,42 +939,42 @@ body{background:#f3ece0;color:#1f2937}
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 非選擇性 α 阻斷劑和攝護腺選擇性 α 阻斷劑有什麼不同&#65311;哪個比較好&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     兩者同屬 α 阻斷劑&#65292;機轉相近&#65292;主要差別在受體選擇性&#12290;攝護腺選擇性藥物對攝護腺 α1A 受體更具選擇性&#65292;對血壓影響較小&#65292;適合有心血管疾病或同時服用降血壓藥的患者&#12290;非選擇性藥物選擇性稍低&#65292;低血壓風險略高&#12290;實際使用上兩者症狀改善效果相當&#65292;選擇需依個人心血管狀況與醫師評估而定&#12290;需特別注意的是&#65292;兩種藥物都<strong>無法阻止攝護腺體積隨年齡持續增大</strong>&#65292;僅能暫時擴張尿道緩解症狀&#12290;
   </div>
 </details>
 
 <details open="" style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 5α 還原酶抑制劑真的會影響性功能嗎&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     臨床試驗顯示&#65292;約 3&#8211;8% 的患者服用 5α 還原酶抑制劑後出現性慾降低或勃起功能障礙&#65292;大多數在停藥後可恢復&#12290;更值得注意的是&#65306;<span style="background-color: #e8eaf6; color: #1a237e; font-size: 15px; font-weight: 700;">5α 還原酶抑制劑</span>會使 PSA 數值下降約 50%&#65292;若醫師未掌握患者服藥史&#65292;可能誤判 PSA 正常&#65292;延誤攝護腺癌的早期發現&#12290;服藥期間請務必告知每位看診醫師&#65292;並將實際 PSA 數值乘以 2 作為校正參考值&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 攝護腺藥物可以自己停嗎&#65311;停藥有什麼風險&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     不建議自行停藥&#12290;α 阻斷劑停藥後&#65292;鬆弛效果消失&#65292;尿道阻力在數天至數週內回升&#65292;頻尿&#12289;夜尿&#12289;尿流細弱等症狀會快速復發&#12290;5α 還原酶抑制劑停藥後&#65292;攝護腺體積在數月內回升至原來大小&#12290;更重要的是&#65292;<strong>攝護腺仍會隨著時間和年齡持續增大</strong>&#65292;即使服藥期間症狀穩定&#65292;長期下來腺體體積累積增大&#65292;最終可能超過藥物可控制的範圍&#12290;若希望脫離長期服藥&#65292;應先評估是否適合接受 HoLEP / ThuLEP 雷射手術&#65292;在醫師規劃下有序轉換治療策略&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 做了 HoLEP 手術後&#65292;還需要繼續吃藥嗎&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     大多數患者在 HoLEP / ThuLEP 術後可完全停止攝護腺肥大相關藥物&#12290;手術直接切除造成阻塞的攝護腺移行帶組織&#65292;從根本解除尿道壓迫&#65292;不再依賴藥物鬆弛平滑肌或縮小體積&#12290;術後 PSA 也會恢復至正常基線&#65292;不再受 5α 還原酶抑制劑干擾&#65292;更有利於後續攝護腺癌的監測追蹤&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 藥物和手術可以同時進行嗎&#65311;什麼時候該從藥物轉換為手術&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     藥物可在等待手術期間持續服用&#65292;手術前不需停藥&#12290;以下情況建議從藥物治療轉換為 HoLEP 手術評估&#65306;&#9312; 藥物療效逐漸下降&#65292;症狀仍持續惡化 &#9313; IPSS 評分 &#8805;20 分&#65288;重度&#65289;&#9314; 殘尿量超過 200&#8211;300ml &#9315; 曾發生急性尿滯留 &#9316; PSA 持續異常&#65292;需取得組織排除癌症 &#9317; 患者希望終止長期服藥&#12289;提升生活品質&#12290;尤其當<strong>攝護腺體積持續增大超過 80g</strong>&#65292;藥物效果將明顯不足&#65292;手術根治往往是更好的選擇&#12290;
   </div>
 </details>
 
 <details style="border-radius: 8px; border: 1px solid rgb(159, 168, 218); color: #222222; font-size: 16px; margin-bottom: 10px; overflow: hidden;">
   <summary style="background: rgb(232, 234, 246); color: #1a237e; cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; padding: 14px 16px;">&#9654; 吃了攝護腺藥後頭暈&#12289;血壓低&#65292;怎麼辦&#65311;</summary>
-  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px; line-height: 1.8; padding: 14px 16px;">
+  <div style="background: rgb(255, 255, 255); color: #0d1440; font-size: 14px;font-size:max(var(--m15,0px),14px); line-height: 1.8; padding: 14px 16px;">
     α 阻斷劑可能導致&#12300;姿態性低血壓&#12301;&#65292;尤其在由坐姿或躺姿突然站起時出現頭暈&#12290;建議&#65306;&#9312; 起身動作放慢&#65292;緩慢改變姿勢 &#9313; 睡前服藥可減少白天頭暈感 &#9314; 告知醫師目前的降血壓藥物&#65292;避免交互作用 &#9315; 若頭暈嚴重或昏厥&#65292;立即回診評估是否換藥或調整劑量&#12290;攝護腺選擇性較高的藥物相較非選擇性藥物&#65292;低血壓副作用通常較輕微&#12290;
   </div>
 </details>
@@ -977,7 +986,7 @@ body{background:#f3ece0;color:#1f2937}
   </div>
   <div style="flex: 1 1 200px;">
     <div style="color: #c5cae9; font-size: 18px; font-weight: 700; margin-bottom: 4px;">黃建榮 醫師&#65372;臺北醫學大學附設醫院 泌尿科</div>
-    <div style="color: #9fa8da; font-size: 13px; line-height: 1.7;">
+    <div style="color: #9fa8da; font-size: 13px;font-size:max(var(--m15,0px),13px); line-height: 1.7;">
       🏆 &#12298;商業周刊&#12299;台灣百大良醫<br />
       🎓 美國哈佛大學 Brigham and Women's Hospital 達文西機械手臂手術 Fellowship<br />
       &#9889; 專長&#65306;HoLEP / ThuLEP 攝護腺雷射手術&#65288;1,500+ 案例&#65289;&#12289;RIRS 軟式輸尿管鏡取石&#12289;HIFU 海福刀&#12289;達文西機械手臂泌尿外科手術
@@ -988,7 +997,7 @@ body{background:#f3ece0;color:#1f2937}
 <!--CTA-->
 <div style="background: rgb(232, 234, 246); border-radius: 12px; border: 2px solid rgb(57, 73, 171); color: #222222; font-size: 16px; margin: 24px 0px; padding: 20px 24px; text-align: center;">
   <div style="color: #1a237e; font-size: 17px; font-weight: 700; margin-bottom: 12px;">🩺 想脫離終生服藥&#65311;預約北醫泌尿科評估 HoLEP 手術適應症</div>
-  <p style="color: #283593; font-size: 14px; margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
+  <p style="color: #283593; font-size: 14px;font-size:max(var(--m15,0px),14px); margin: 0px 0px 16px;">黃醫師提供藥物療效評估&#12289;IPSS 問卷&#12289;攝護腺超音波與 PSA / PHI 篩檢&#65292;協助您判斷是否適合以手術取代長期藥物治療&#12290;</p>
   <div style="-webkit-flex-wrap: wrap; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
     <a href="https://www.tmuh.org.tw/tmuh/web/Booking/index.html" style="background: rgb(26, 35, 126); border-radius: 8px; color: white; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;">📅 北醫門診線上預約</a>
     <a href="https://line.me/R/ti/p/@dr.andy" style="background: rgb(0, 195, 0); border-radius: 8px; color:#333333; font-size: 15px; font-weight: 700; padding: 12px 24px; text-decoration: none;">💬 LINE @Dr.Andy 諮詢</a>
@@ -997,11 +1006,11 @@ body{background:#f3ece0;color:#1f2937}
 
 <!--回首頁-->
 <div style="color: #222222; font-size: 16px; margin: 24px 0px 8px; text-align: center;">
-  <a href="./" style="color: #3949ab; font-size: 14px; text-decoration: none;">&#8592; 回到首頁&#65372;黃建榮醫師攝護腺雷射手術專欄</a>
+  <a href="./" style="color: #3949ab; font-size: 14px;font-size:max(var(--m15,0px),14px); text-decoration: none;">&#8592; 回到首頁&#65372;黃建榮醫師攝護腺雷射手術專欄</a>
 </div>
 
 </div>
-<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top:26px;"><h2 style="font-size:1.15em;color:#2c3e50;">FAQ&#65306;關於藥物治療&#65292;大家最常問哪些問題&#65311;</h2><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q1&#65306;攝護腺藥會影響性功能嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">5α還原酶抑制劑約 3&#8211;5% 出現性慾下降或勃起障礙&#65292;停藥後多可恢復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q2&#65306;保健食品有效嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">鋸棕櫚等成分證據有限&#65292;多項研究與安慰劑差異不到 1 成&#65292;不能取代正規治療&#65307;服用前告知醫師&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q3&#65306;甲型阻斷劑多久見效&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">約數天至 2&#8211;4 週&#65307;常見副作用為頭暈&#12289;鼻塞與姿勢性低血壓&#65292;發生率約 5&#8211;15%&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q4&#65306;5α還原酶抑制劑要吃多久&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">需連續服用 6 個月以上才有縮小效果&#65292;停藥後會逐漸回復&#12290;</p></details><details style="margin:8px 0;background:#fafafa;border:1px solid #e8e8e8;border-radius:8px;padding:10px 14px;"><summary style="font-weight:700;cursor:pointer;color:#2c3e50;">Q5&#65306;藥要吃一輩子嗎&#65311;</summary><p style="margin:8px 0 0 0;line-height:1.8;">多數需長期服用維持效果&#65292;停藥後症狀常於 2&#8211;4 週內回復&#65307;不想長期吃藥者可評估微創手術&#12290;</p></details></div><div class="geo-pack-20260908" style="margin-top:28px;padding-top:14px;border-top:1px solid #e0e0e0;"><h2 style="font-size:1.15em;color:#2c3e50;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left:1.4em;"><li style="margin:6px 0;"><a href="./bph-topic-clusters.html" style="color:#1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin:6px 0;"><a href="./surgery-cost-guide.html" style="color:#1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin:6px 0;"><a href="./holep-guide.html" style="color:#1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin:6px 0;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color:#1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin:6px 0;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color:#1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="font-size:1.15em;color:#2c3e50;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left:1.4em;"><li style="margin:6px 0;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color:#1a73a8;word-break:break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin:6px 0;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color:#1a73a8;word-break:break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin:6px 0;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color:#1a73a8;word-break:break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin:6px 0;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color:#1a73a8;word-break:break-all;">http://www.tua.org.tw/</a></li></ol><p style="color:#888;font-size:0.85em;font-size:max(var(--m15,0px),0.85em);">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>

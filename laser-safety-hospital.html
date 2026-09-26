@@ -304,8 +304,17 @@ body{background:#f3ece0;color:#1f2937}
 .tile-title{color:#1f3556}
 .tile .views{color:#8a6a1f}
 @media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
-@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:1px;font-size:11px}
  .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
+/* ===== 手機版修正（老闆 2026-09-26）：只作用在手機，電腦版長相不變 =====
+   ① 小字下限：mobile_fonts() 把內文小於 15px 的字級包成 max(var(--m15,0px), 原值)，
+      電腦版沒有定義變數→等於原值；手機版→至少 15px（原本 ≤11px 的標籤類→至少 13px）
+   ② 內容不准比螢幕寬（表格除外，表格本來就在可左右滑的框裡）
+   ③ 影片框跟著螢幕寬 */
+@media(max-width:680px){
+ .post-body{--m15:15px;--m13:13px;overflow-x:clip}
+ .post-body :not(table):not(thead):not(tbody):not(tr):not(td):not(th){max-width:100%;box-sizing:border-box}
+ .post-body iframe{width:100%!important;height:auto!important;aspect-ratio:16/9}}
 </style>
 </head>
 <body class="item" data-slug="laser-safety-hospital">
@@ -334,27 +343,27 @@ body{background:#f3ece0;color:#1f2937}
     <span style="-webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; background: linear-gradient(90deg, rgb(212, 175, 55), rgb(240, 208, 96), rgb(200, 150, 12)) text;color:#1c1c1e">安全嗎&#65311;住院幾天&#65311;怎麼</span><span style="background-color: initial;">麻醉</span><span style="background-color: initial;">&#65311;</span></h1><h1 style="color: #f0e8d0; font-size: clamp(22px,5vw,36px); font-weight: 700; line-height: 1.35; margin: 0px 0px 16px;"><span style="background-color: initial; color: rgba(240, 232, 208, 0.82); font-size: large;">術前最常問的四個問題&#65292;黃建榮醫師一次說清楚</span></h1>
 
   <div style="color:#a7a7a7; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">🔬 HoLEP / ThuLEP</span>
-    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">🏥 臺北醫學大學附設醫院</span>
-    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px; padding: 5px 16px;">👨&#8205;&#9877;&#65039; 黃建榮醫師</span>
+    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 16px;">🔬 HoLEP / ThuLEP</span>
+    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 16px;">🏥 臺北醫學大學附設醫院</span>
+    <span style="background: rgba(212, 175, 55, 0.15); border-radius: 20px; border: 1px solid rgba(212, 175, 55, 0.45); color: #f0d060; font-size: 13px;font-size:max(var(--m15,0px),13px); padding: 5px 16px;">👨&#8205;&#9877;&#65039; 黃建榮醫師</span>
   </div>
 </div>
 
 <span style="color: #222222;"><!--&#9552;&#9552;&#9552; AI 摘要框 &#9552;&#9552;&#9552;--></span>
 <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 240)); border-left: 5px solid rgb(26, 58, 107); border-radius: 0px 12px 12px 0px; box-shadow: rgba(26, 58, 107, 0.08) 0px 4px 20px; color: #222222; margin: 36px 22px 0px; padding: 26px 24px;">
   <div style="align-items: center; display: flex; gap: 10px; margin-bottom: 14px;">
-    <span style="background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107)); border-radius: 20px; color: #d4af37; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 4px 14px;">&#10022; 精華摘要</span>
+    <span style="background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107)); border-radius: 20px; color: #d4af37; font-size: 11px;font-size:max(var(--m13,0px),11px); font-weight: 700; letter-spacing: 1px; padding: 4px 14px;">&#10022; 精華摘要</span>
   </div>
-  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.85; margin: 0px 0px 9px;">
+  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.85; margin: 0px 0px 9px;">
     <strong style="color: #0d2347;">&#9312; 安全性&#65306;</strong>HoLEP / ThuLEP 是目前國際指引推薦的高標準攝護腺手術&#65292;出血量極少&#12289;不需切開腹部&#65292;整體安全性高&#65292;是&#12300;微創手術&#12301;的代表&#12290;
   </p>
-  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.85; margin: 0px 0px 9px;">
+  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.85; margin: 0px 0px 9px;">
     <strong style="color: #0d2347;">&#9313; 住院天數&#65306;</strong>多數患者術後住院 2&#8211;3 天&#65292;隔天即可下床活動&#65292;恢復速度快&#12290;
   </p>
-  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.85; margin: 0px 0px 9px;">
+  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.85; margin: 0px 0px 9px;">
     <strong style="color: #0d2347;">&#9314; 麻醉方式&#65306;</strong>多採舒眠麻醉或脊椎麻醉&#65288;半身麻醉&#65289;&#65292;無痛&#65292;對心肺負擔小&#65307;年紀大或特殊情況也可全身麻醉&#12290;
   </p>
-  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.85; margin: 0px;">
+  <p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.85; margin: 0px;">
     <strong style="color: #0d2347;">&#9315; 出院時機&#65306;</strong>尿管通常於術後 1&#8211;2 天拔除&#65292;拔管後排尿順暢即可出院&#65292;整體住院約 2&#8211;3 天&#12290;
   </p>
 </div>
@@ -366,30 +375,30 @@ body{background:#f3ece0;color:#1f2937}
 <h2 style="border-bottom: 2px solid; border-image: linear-gradient(90deg, rgb(26, 58, 107), rgb(212, 175, 55)) 1 / 1 / 0 stretch; color: #0a1628; font-size: clamp(17px,3.2vw,24px); margin: 44px 0px 14px; padding-bottom: 10px;">
   &#9312; 攝護腺雷射手術安全嗎&#65311;
 </h2>
-<p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.9; margin: 0px 0px 16px;">
+<p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.9; margin: 0px 0px 16px;">
   HoLEP&#65288;鈥雷射攝護腺剜除術&#65289;與 ThuLEP&#65288;銩雷射攝護腺剜除術&#65289;是目前<strong style="color: #0d2347;">歐洲泌尿科學會&#65288;EAU&#65289;與美國 AUA 指引共同推薦</strong>的高階手術&#65292;具備以下核心安全特點&#65306;
 </p>
 
 <div style="color: #222222; display: flex; flex-wrap: wrap; gap: 14px; margin: 0px 0px 24px;">
   <div style="border-color: rgb(26, 58, 107) rgba(26, 58, 107, 0.2) rgba(26, 58, 107, 0.2); border-image: initial; border-radius: 0px 0px 10px 10px; border-style: solid; border-top: 3px solid #1a3a6b; border-width: 3px 1px 1px; border: 1px solid rgba(26, 58, 107, 0.2); flex: 1 1 0%; min-width: 170px; padding: 18px 16px; text-align: center;">
     <div style="font-size: 26px; margin-bottom: 8px;">🩸</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px); margin-bottom: 6px;">出血量極少</strong>
-    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px); line-height: 1.7; margin: 0px;">雷射光纖同步止血&#65292;術中出血遠低於傳統開刀</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); margin-bottom: 6px;">出血量極少</strong>
+    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 1.7; margin: 0px;">雷射光纖同步止血&#65292;術中出血遠低於傳統開刀</p>
   </div>
   <div style="border-color: rgb(212, 175, 55) rgba(26, 58, 107, 0.2) rgba(26, 58, 107, 0.2); border-image: initial; border-radius: 0px 0px 10px 10px; border-style: solid; border-top: 3px solid #d4af37; border-width: 3px 1px 1px; border: 1px solid rgba(26, 58, 107, 0.2); flex: 1 1 0%; min-width: 170px; padding: 18px 16px; text-align: center;">
     <div style="font-size: 26px; margin-bottom: 8px;">🚫</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px); margin-bottom: 6px;">不切開腹部</strong>
-    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px); line-height: 1.7; margin: 0px;">完全經由自然腔道&#65288;尿道&#65289;進行&#65292;無體外傷口</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); margin-bottom: 6px;">不切開腹部</strong>
+    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 1.7; margin: 0px;">完全經由自然腔道&#65288;尿道&#65289;進行&#65292;無體外傷口</p>
   </div>
   <div style="border-color: rgb(26, 58, 107) rgba(26, 58, 107, 0.2) rgba(26, 58, 107, 0.2); border-image: initial; border-radius: 0px 0px 10px 10px; border-style: solid; border-top: 3px solid #1a3a6b; border-width: 3px 1px 1px; border: 1px solid rgba(26, 58, 107, 0.2); flex: 1 1 0%; min-width: 170px; padding: 18px 16px; text-align: center;">
     <div style="font-size: 26px; margin-bottom: 8px;">💊</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px); margin-bottom: 6px;">抗凝血藥可手術</strong>
-    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px); line-height: 1.7; margin: 0px;">心臟病&#12289;服用血液稀釋劑的高齡患者也可接受</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); margin-bottom: 6px;">抗凝血藥可手術</strong>
+    <p style="color: #555555; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 1.7; margin: 0px;">心臟病&#12289;服用血液稀釋劑的高齡患者也可接受</p>
   </div>
 </div>
 
 <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.15); color: #222222; margin-bottom: 8px; padding: 18px 20px;">
-  <p style="color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 0px;">
+  <p style="color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 0px;">
     💡 <strong style="color: #0d2347;">簡單說&#65306;</strong>攝護腺雷射手術是目前已知最微創&#12289;最不流血&#12289;恢復最快的攝護腺手術&#65292;非常適合高齡或有慢性病的患者&#12290;</p><div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/s1264/Gemini_Generated_Image_qy89bmqy89bmqy89.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="847" data-original-width="1264" height="298" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiT6JSp4Hd-PxBpwpxGBgC2ohFq-R6foFdqBjOmjmITBKsZZ6YPZdDzmXn_7-0SiKwOiByJg6clNwFh68Pfe-uLRrJTLHmQVYIc_2OgPY2nc7pApXp3Li2KJuDrSILu9KjYcyE8RNi8RloDnNiOiU4nfRpkGyYROVUzIAEVxpbRRt_K51efJhFkbFwgsPMx/w446-h298/Gemini_Generated_Image_qy89bmqy89bmqy89.png" width="446" /></a></div><br />
   <p></p>
 </div>
@@ -399,7 +408,7 @@ body{background:#f3ece0;color:#1f2937}
   &#9313; 攝護腺雷射手術要住院幾天&#65311;
 </h2>
 
-<p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.9; margin: 0px 0px 20px;">
+<p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.9; margin: 0px 0px 20px;">
   大多數患者的標準住院流程如下&#65306;
 </p>
 
@@ -409,30 +418,30 @@ body{background:#f3ece0;color:#1f2937}
 
   <div style="margin-bottom: 22px; position: relative;">
     <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#1c1c1e"></div>
-    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術前一天 / 當天</strong>
-    <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">入院辦理&#12289;麻醉前評估&#12289;備皮&#65292;通常下午或隔天早上手術</p>
+    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px));">手術前一天 / 當天</strong>
+    <p style="color: #555555; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 6px 0px 0px;">入院辦理&#12289;麻醉前評估&#12289;備皮&#65292;通常下午或隔天早上手術</p>
   </div>
   <div style="margin-bottom: 22px; position: relative;">
     <div style="background: rgb(26, 58, 107); border-radius: 50%; border: 2px solid rgb(212, 175, 55); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;color:#1c1c1e"></div>
-    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">手術當天</strong>
-    <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">手術時間約 1&#8211;2 小時&#65292;術後放置尿管幫助膀胱沖洗&#65292;當天即可下床走動</p>
+    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px));">手術當天</strong>
+    <p style="color: #555555; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 6px 0px 0px;">手術時間約 1&#8211;2 小時&#65292;術後放置尿管幫助膀胱沖洗&#65292;當天即可下床走動</p>
   </div>
   <div style="margin-bottom: 22px; position: relative;">
     <div style="background: rgb(212, 175, 55); border-radius: 50%; border: 2px solid rgb(26, 58, 107); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;"></div>
-    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">術後第 1&#8211;2 天</strong>
-    <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">評估出血情形&#65292;膀胱沖洗液轉清澈後&#65292;由醫師評估是否可拔除尿管</p>
+    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px));">術後第 1&#8211;2 天</strong>
+    <p style="color: #555555; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 6px 0px 0px;">評估出血情形&#65292;膀胱沖洗液轉清澈後&#65292;由醫師評估是否可拔除尿管</p>
   </div>
   <div style="position: relative;">
     <div style="background: rgb(212, 175, 55); border-radius: 50%; border: 2px solid rgb(26, 58, 107); height: 14px; left: -22px; position: absolute; top: 4px; width: 14px;"></div>
-    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);">出院&#65288;術後第 2&#8211;3 天&#65289;</strong>
-    <p style="color: #555555; font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 6px 0px 0px;">拔尿管後能自行排尿&#12289;無明顯不適&#65292;辦理出院</p>
+    <strong style="color: #0d2347; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px));">出院&#65288;術後第 2&#8211;3 天&#65289;</strong>
+    <p style="color: #555555; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 6px 0px 0px;">拔尿管後能自行排尿&#12289;無明顯不適&#65292;辦理出院</p>
   </div>
 </div>
 
 <span style="color: #222222;"><!--住院天數對照表--></span>
-<h3 style="color: #1a3a6b; font-size: clamp(14px,2.2vw,17px); margin: 28px 0px 14px;">📊 各術式住院天數對照</h3>
+<h3 style="color: #1a3a6b; font-size: clamp(14px,2.2vw,17px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,17px)); margin: 28px 0px 14px;">📊 各術式住院天數對照</h3>
 <div style="color: #222222; margin: 0px 0px 8px; overflow-x: auto;">
-  <table style="border-collapse: collapse; font-size: clamp(13px,2vw,15px); width: 100%;">
+  <table style="border-collapse: collapse; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); width: 100%;">
     <thead>
       <tr style="background: linear-gradient(90deg, rgb(10, 22, 40), rgb(26, 58, 107)); color: #d4af37;">
         <th style="font-weight: 600; padding: 13px 16px; text-align: left;">手術類型</th>
@@ -467,18 +476,18 @@ body{background:#f3ece0;color:#1f2937}
 
 <div style="color: #222222; display: flex; flex-wrap: wrap; gap: 16px; margin: 0px 0px 20px;">
   <div style="background: linear-gradient(135deg, rgb(10, 22, 40), rgb(26, 58, 107)); border-radius: 12px; color: white; flex: 1 1 0%; min-width: 220px; padding: 22px 18px;">
-    <div style="color: #d4af37; font-size: clamp(14px,2.2vw,16px); font-weight: 700; margin-bottom: 10px;">&#11088; 主流選擇&#65306;舒眠型全身麻醉</div><ul style="color: rgba(255, 255, 255, 0.88); font-size: clamp(12px,1.8vw,14px); line-height: 1.9; margin: 0px; padding-left: 18px;"><li>極度焦慮&#12289;無法長時間維持姿勢者</li><li>適合無法配合脊椎麻醉的患者</li><li>睡一覺&#12289;醒來就好了</li><li>由麻醉科醫師術前評估決定</li>
+    <div style="color: #d4af37; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 700; margin-bottom: 10px;">&#11088; 主流選擇&#65306;舒眠型全身麻醉</div><ul style="color: rgba(255, 255, 255, 0.88); font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 1.9; margin: 0px; padding-left: 18px;"><li>極度焦慮&#12289;無法長時間維持姿勢者</li><li>適合無法配合脊椎麻醉的患者</li><li>睡一覺&#12289;醒來就好了</li><li>由麻醉科醫師術前評估決定</li>
       <li>術後恢復較快</li>
     </ul>
   </div>
   <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 240)); border-radius: 12px; border: 1px solid rgba(26, 58, 107, 0.2); flex: 1 1 0%; min-width: 220px; padding: 22px 18px;">
-    <div style="color: #1a3a6b; font-size: clamp(14px,2.2vw,16px); font-weight: 700; margin-bottom: 10px;">🔄 備選方案&#65306;半身麻醉</div><ul style="color: #555555; font-size: clamp(12px,1.8vw,14px); line-height: 1.9; margin: 0px; padding-left: 18px;"><li>腰椎注射麻醉藥&#65292;下半身無痛</li><li>患者保持清醒&#65292;可與醫師溝通</li><li>對心肺系統負擔小&#65292;高齡患者友善</li><li>噁心嘔吐等副作用少</li>
+    <div style="color: #1a3a6b; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 700; margin-bottom: 10px;">🔄 備選方案&#65306;半身麻醉</div><ul style="color: #555555; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 1.9; margin: 0px; padding-left: 18px;"><li>腰椎注射麻醉藥&#65292;下半身無痛</li><li>患者保持清醒&#65292;可與醫師溝通</li><li>對心肺系統負擔小&#65292;高齡患者友善</li><li>噁心嘔吐等副作用少</li>
     </ul>
   </div>
 </div>
 
 <div style="background: linear-gradient(135deg, rgb(255, 253, 240), rgb(255, 248, 224)); border-left: 4px solid rgb(212, 175, 55); border-radius: 0px 10px 10px 0px; margin-bottom: 8px; padding: 16px 20px;">
-  <p style="font-size: clamp(13px,2vw,15px); line-height: 1.8; margin: 0px;"><span style="color: #555555;">
+  <p style="font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.8; margin: 0px;"><span style="color: #555555;">
     💬 <strong style="color: #0d2347;">黃醫師說&#65306;</strong>&#12300;大多數患者選擇</span><span style="background-color: initial; color: #555555;">舒眠</span><span style="background-color: initial; color: #555555;">麻醉&#65292;術中睡一覺&#65292;很多人說比他們想像的輕鬆多了&#12290;&#12301;</span></p>
 </div>
 
@@ -487,30 +496,30 @@ body{background:#f3ece0;color:#1f2937}
   &#9315; 手術後多久可以出院&#65311;
 </h2>
 
-<p style="color: #333333; font-size: clamp(14px,2.2vw,16px); line-height: 1.9; margin: 0px 0px 18px;">
+<p style="color: #333333; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.9; margin: 0px 0px 18px;">
   能否出院&#65292;主要看這三個條件是否都達到&#65306;
 </p>
 
 <div style="color: #222222; display: flex; flex-wrap: wrap; gap: 12px; margin: 0px 0px 24px;">
   <div style="border-radius: 10px; border: 1.5px solid rgb(212, 175, 55); flex: 1 1 0%; min-width: 150px; padding: 16px; text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">&#9989;</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);">尿管已拔除</strong>
-    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px); line-height: 1.6; margin: 6px 0px 0px;">沖洗液清澈後由醫師評估</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px));">尿管已拔除</strong>
+    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px);font-size:max(var(--m15,0px),clamp(11px,1.8vw,13px)); line-height: 1.6; margin: 6px 0px 0px;">沖洗液清澈後由醫師評估</p>
   </div>
   <div style="border-radius: 10px; border: 1.5px solid rgb(212, 175, 55); flex: 1 1 0%; min-width: 150px; padding: 16px; text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">&#9989;</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);">能自行排尿</strong>
-    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px); line-height: 1.6; margin: 6px 0px 0px;">尿流順暢&#12289;無明顯困難</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px));">能自行排尿</strong>
+    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px);font-size:max(var(--m15,0px),clamp(11px,1.8vw,13px)); line-height: 1.6; margin: 6px 0px 0px;">尿流順暢&#12289;無明顯困難</p>
   </div>
   <div style="border-radius: 10px; border: 1.5px solid rgb(212, 175, 55); flex: 1 1 0%; min-width: 150px; padding: 16px; text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">&#9989;</div>
-    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);">無發燒或異常</strong>
-    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px); line-height: 1.6; margin: 6px 0px 0px;">體溫正常&#12289;無感染跡象</p>
+    <strong style="color: #0d2347; display: block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px));">無發燒或異常</strong>
+    <p style="color: #777777; font-size: clamp(11px,1.8vw,13px);font-size:max(var(--m15,0px),clamp(11px,1.8vw,13px)); line-height: 1.6; margin: 6px 0px 0px;">體溫正常&#12289;無感染跡象</p>
   </div>
 </div>
 
 <div style="background: linear-gradient(135deg, rgb(13, 35, 71), rgb(26, 58, 107)); border-radius: 12px; color:#a7a7a7; margin-bottom: 8px; padding: 20px 22px;">
-  <p style="color: rgba(240, 232, 208, 0.9); font-size: clamp(14px,2.2vw,16px); line-height: 1.8; margin: 0px;">
+  <p style="color: rgba(240, 232, 208, 0.9); font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); line-height: 1.8; margin: 0px;">
     📅 <strong style="color: #d4af37;">典型時程&#65306;</strong>術後第 1 天拔尿管 &#8594; 測試排尿 &#8594; 第 2&#8211;3 天出院&#12290;若攝護腺體積較大&#12289;術後出血較多&#65292;可能需多觀察 1 天&#12290;
   </p>
 </div>
@@ -521,65 +530,65 @@ body{background:#f3ece0;color:#1f2937}
 </h2>
 
 <details style="border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-bottom: 12px; overflow: hidden;">
-  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
+  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
     Q1&#65372;手術當天就可以進食和喝水嗎&#65311;
     <span style="color: #1a3a6b; flex-shrink: 0; font-size: 18px; margin-left: 8px;">&#65291;</span>
   </summary>
-  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.9; padding: 16px 18px;">
+  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.9; padding: 16px 18px;">
     術後約 4&#8211;6 小時&#65292;麻醉效果完全退去&#12289;腸胃蠕動恢復後&#65292;即可開始飲水並進食清淡食物&#12290;大多數患者術後當晚就能正常用餐&#12290;
   </div>
 </details>
 
 <details style="border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-bottom: 12px; overflow: hidden;">
-  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
+  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
     Q2&#65372;手術風險是什麼&#65311;有可能大出血嗎&#65311;
     <span style="color: #1a3a6b; flex-shrink: 0; font-size: 18px; margin-left: 8px;">&#65291;</span>
   </summary>
-  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.9; padding: 16px 18px;">
+  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.9; padding: 16px 18px;">
     HoLEP / ThuLEP 的術中大出血率極低&#65288;&lt;1%&#65289;&#65292;需輸血的機率遠低於傳統 TURP&#12290;雷射本身具有即時凝血功能&#65292;正是其安全性的關鍵優勢&#12290;術後可能的輕微風險包括&#65306;短暫性尿道灼熱感&#12289;尿失禁過渡期&#65288;多數 1&#8211;4 週自行改善&#65289;&#12290;
   </div>
 </details>
 
 <details style="border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-bottom: 12px; overflow: hidden;">
-  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
+  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
     Q3&#65372;出院後多久可以恢復正常生活&#65311;
     <span style="color: #1a3a6b; flex-shrink: 0; font-size: 18px; margin-left: 8px;">&#65291;</span>
   </summary>
-  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.9; padding: 16px 18px;">
+  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.9; padding: 16px 18px;">
     出院後約 1&#8211;2 週可恢復一般日常活動&#65288;散步&#12289;輕鬆家務&#65289;&#12290;術後 4 週避免重體力勞動與劇烈運動&#12290;性生活一般建議術後 4&#8211;6 週後恢復&#12290;大多數患者 1 個月內回歸正常生活節奏&#12290;
   </div>
 </details>
 
 <details style="border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-bottom: 12px; overflow: hidden;">
-  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
+  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
     Q4&#65372;我有在吃心臟病藥&#65288;抗凝血劑&#65289;&#65292;手術前要停藥嗎&#65311;
     <span style="color: #1a3a6b; flex-shrink: 0; font-size: 18px; margin-left: 8px;">&#65291;</span>
   </summary>
-  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.9; padding: 16px 18px;">
+  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.9; padding: 16px 18px;">
     這需要依據您使用的抗凝血藥種類&#65292;由泌尿科醫師與心臟科醫師共同評估&#12290;雷射手術的止血能力優於傳統電刀&#65292;部分患者可在不停藥的情況下手術&#65292;但須個案判斷&#12290;請務必在門診時提供完整用藥清單&#12290;
   </div>
 </details>
 
 <details style="border-radius: 10px; border: 1px solid rgba(26, 58, 107, 0.18); color: #222222; margin-bottom: 28px; overflow: hidden;">
-  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
+  <summary style="align-items: center; background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); color: #0d2347; cursor: pointer; display: flex; font-size: clamp(14px,2.2vw,16px);font-size:max(var(--m15,0px),clamp(14px,2.2vw,16px)); font-weight: 600; justify-content: space-between; list-style: none; padding: 16px 18px;">
     Q5&#65372;我很害怕手術&#65292;有辦法更了解整個流程再決定嗎&#65311;
     <span style="color: #1a3a6b; flex-shrink: 0; font-size: 18px; margin-left: 8px;">&#65291;</span>
   </summary>
-  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px); line-height: 1.9; padding: 16px 18px;">
+  <div style="background: rgb(255, 255, 255); color: #444444; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.9; padding: 16px 18px;">
     完全可以&#12290;建議您帶著超音波報告&#12289;尿流速報告&#12289;目前用藥清單到門診&#65292;讓醫師評估您的攝護腺條件並詳細說明手術方式&#12290;了解愈多&#65292;恐懼感通常就愈少&#12290;我們也提供 LINE 初步諮詢&#65292;方便您在門診前先提問&#12290;
   </div>
 </details>
 
 <span style="color: #222222;"><!--CTA--></span>
 <div style="background: linear-gradient(135deg, rgb(10, 22, 40) 0%, rgb(13, 35, 71) 50%, rgb(26, 58, 107) 100%); border-radius: 16px; color:#909090; margin: 44px 0px 0px; padding: 36px 24px; text-align: center;">
-  <div style="color: #d4af37; font-size: 11px; font-weight: 700; letter-spacing: 4px; margin-bottom: 12px; text-transform: uppercase;">&#10022; 預約門診 &#10022;</div>
+  <div style="color: #d4af37; font-size: 11px;font-size:max(var(--m13,0px),11px); font-weight: 700; letter-spacing: 4px; margin-bottom: 12px; text-transform: uppercase;">&#10022; 預約門診 &#10022;</div>
   <h3 style="color: #f0e8d0; font-size: clamp(17px,3.2vw,24px); line-height: 1.4; margin: 0px 0px 10px;">準備好想了解更多了嗎&#65311;</h3>
-  <p style="color: rgba(240, 232, 208, 0.8); font-size: clamp(13px,2vw,15px); line-height: 1.7; margin: 0px auto 26px; max-width: 500px;">帶著您的超音波與尿流速報告&#65292;讓黃醫師為您量身評估最適合的手術方式&#12290;</p>
+  <p style="color: rgba(240, 232, 208, 0.8); font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); line-height: 1.7; margin: 0px auto 26px; max-width: 500px;">帶著您的超音波與尿流速報告&#65292;讓黃醫師為您量身評估最適合的手術方式&#12290;</p>
   <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
-    <a href="https://www.tmuh.org.tw/tmuh/modules/index.php?mod=department&amp;sid=40" rel="noopener" style="background: linear-gradient(135deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96)); border-radius: 50px; box-shadow: rgba(212, 175, 55, 0.4) 0px 4px 16px; color: #0a1628; display: inline-block; font-size: clamp(13px,2vw,15px); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
+    <a href="https://www.tmuh.org.tw/tmuh/modules/index.php?mod=department&amp;sid=40" rel="noopener" style="background: linear-gradient(135deg, rgb(160, 120, 32), rgb(212, 175, 55), rgb(240, 208, 96)); border-radius: 50px; box-shadow: rgba(212, 175, 55, 0.4) 0px 4px 16px; color: #0a1628; display: inline-block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
       🏥 臺北醫學大學附設醫院門診預約
     </a>
-    <a href="https://line.me/R/ti/p/@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(6, 199, 85, 0.3) 0px 4px 16px; color:#333333; display: inline-block; font-size: clamp(13px,2vw,15px); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
+    <a href="https://line.me/R/ti/p/@dr.andy" rel="noopener" style="background: rgb(6, 199, 85); border-radius: 50px; box-shadow: rgba(6, 199, 85, 0.3) 0px 4px 16px; color:#333333; display: inline-block; font-size: clamp(13px,2vw,15px);font-size:max(var(--m15,0px),clamp(13px,2vw,15px)); font-weight: 700; padding: 13px 26px; text-decoration: none;" target="_blank">
       💬 LINE 諮詢 @Dr.Andy
     </a>
   </div>
@@ -593,14 +602,14 @@ body{background:#f3ece0;color:#1f2937}
     </div>
     <div style="flex: 1 1 0%; min-width: 200px;">
       <div style="color: #0a1628; font-size: clamp(15px,2.5vw,19px); font-weight: 700; margin-bottom: 3px;">黃建榮 醫師</div>
-      <div style="color: #1a3a6b; font-size: clamp(12px,1.8vw,14px); margin-bottom: 8px;">臺北醫學大學附設醫院 泌尿科</div>
-      <div style="color: #555555; font-size: clamp(12px,1.8vw,13px); line-height: 1.8;">
+      <div style="color: #1a3a6b; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); margin-bottom: 8px;">臺北醫學大學附設醫院 泌尿科</div>
+      <div style="color: #555555; font-size: clamp(12px,1.8vw,13px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,13px)); line-height: 1.8;">
         專長&#65306;HoLEP&#65295;ThuLEP 高階攝護腺雷射手術&#12539;大體積攝護腺剜除術&#12539;RIRS 軟式輸尿管鏡取石&#12539;達文西機械手臂泌尿外科手術<br />
         <span style="color:#5c697a;">具哈佛大學體系頂尖醫學中心微創研究背景</span>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px;">
-        <a href="./" rel="noopener" style="background: rgba(26, 58, 107, 0.08); border-radius: 20px; color: #1a3a6b; font-size: 12px; padding: 4px 12px; text-decoration: none;" target="_blank">🔬 doctor-laser.blogspot.com</a>
-        <a href="https://doctor-rirs.blogspot.com" rel="noopener" style="background: rgba(212, 175, 55, 0.1); border-radius: 20px; color: #a07820; font-size: 12px; padding: 4px 12px; text-decoration: none;" target="_blank">🫙 doctor-rirs.blogspot.com</a>
+        <a href="./" rel="noopener" style="background: rgba(26, 58, 107, 0.08); border-radius: 20px; color: #1a3a6b; font-size: 12px;font-size:max(var(--m15,0px),12px); padding: 4px 12px; text-decoration: none;" target="_blank">🔬 doctor-laser.blogspot.com</a>
+        <a href="https://doctor-rirs.blogspot.com" rel="noopener" style="background: rgba(212, 175, 55, 0.1); border-radius: 20px; color: #a07820; font-size: 12px;font-size:max(var(--m15,0px),12px); padding: 4px 12px; text-decoration: none;" target="_blank">🫙 doctor-rirs.blogspot.com</a>
       </div>
     </div>
   </div>
@@ -608,8 +617,8 @@ body{background:#f3ece0;color:#1f2937}
 
 <span style="color: #222222;"><!--延伸閱讀--></span>
 <div style="background: linear-gradient(135deg, rgb(240, 244, 255), rgb(255, 253, 245)); border-radius: 10px; color: #222222; margin-top: 32px; padding: 20px 22px;">
-  <h3 style="color: #1a3a6b; font-size: clamp(13px,2vw,16px); margin: 0px 0px 14px;">📚 延伸閱讀</h3>
-  <ul style="color: #555555; font-size: clamp(12px,1.8vw,14px); line-height: 2; margin: 0px; padding-left: 18px;">
+  <h3 style="color: #1a3a6b; font-size: clamp(13px,2vw,16px);font-size:max(var(--m15,0px),clamp(13px,2vw,16px)); margin: 0px 0px 14px;">📚 延伸閱讀</h3>
+  <ul style="color: #555555; font-size: clamp(12px,1.8vw,14px);font-size:max(var(--m15,0px),clamp(12px,1.8vw,14px)); line-height: 2; margin: 0px; padding-left: 18px;">
     <li><a href="./" rel="noopener" style="color: #1a3a6b; text-decoration: none;">HoLEP vs ThuLEP vs GreenLight&#65306;三種攝護腺雷射手術完整比較</a></li>
     <li><a href="./" rel="noopener" style="color: #1a3a6b; text-decoration: none;">攝護腺手術後逆行性射精&#65306;保留精阜技術最新進展</a></li>
     <li><a href="./" rel="noopener" style="color: #a07820; text-decoration: none;">攝護腺幾公克要開刀&#65311;排尿藥物吃沒效怎麼辦&#65311;</a></li>
@@ -618,7 +627,7 @@ body{background:#f3ece0;color:#1f2937}
 
 </div><span style="color: #222222;"><!--/padding wrapper--></span>
 </div><!--/main wrapper-->
-<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color: #1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
+<div class="geo-faq-20260908" style="margin-top: 26px;"><h2 style="color: #2c3e50; font-size: 1.15em;">FAQ&#65306;關於術後恢復&#65292;大家最常問哪些問題&#65311;</h2><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q1&#65306;什麼時候能運動&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">快走約 2 週後可開始&#65292;重量訓練與騎車建議滿 4 週&#65292;避免提超過 5 公斤重物&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q2&#65306;術後要回診幾次&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般安排術後 1&#8211;2 週&#12289;1 個月&#12289;3 個月與 6 個月&#65292;之後每年追蹤 1 次&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q3&#65306;術後排尿會馬上變順嗎&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">多數移除導尿管後即明顯改善&#65292;少數 1&#8211;3 個月內有暫時性急尿或滲尿&#65292;會逐步恢復&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q4&#65306;哪些狀況要立刻就醫&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">發燒超過 38 度&#12289;大量鮮血尿&#12289;完全解不出尿或劇烈疼痛&#65292;請立即回診或掛急診&#12290;</p></details><details style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(232, 232, 232); margin: 8px 0px; padding: 10px 14px;"><summary style="color: #2c3e50; cursor: pointer; font-weight: 700;">Q5&#65306;性生活多久可恢復&#65311;</summary><p style="line-height: 1.8; margin: 8px 0px 0px;">一般建議術後 4 週&#65292;並依個人恢復狀況與醫師確認&#12290;</p></details></div><div class="geo-pack-20260908" style="border-top: 1px solid rgb(224, 224, 224); margin-top: 28px; padding-top: 14px;"><h2 style="color: #2c3e50; font-size: 1.15em;">想繼續了解哪些主題&#65311;延伸閱讀</h2><ul style="padding-left: 1.4em;"><li style="margin: 6px 0px;"><a href="./bph-topic-clusters.html" style="color: #1a73a8;">2026 攝護腺肥大終極指南</a></li><li style="margin: 6px 0px;"><a href="./surgery-cost-guide.html" style="color: #1a73a8;">2026 攝護腺手術術式與費用全攻略</a></li><li style="margin: 6px 0px;"><a href="./holep-guide.html" style="color: #1a73a8;">HoLEP雷射手術優缺點&#12289;費用與恢復期</a></li><li style="margin: 6px 0px;"><a href="https://doctor-davinci.blogspot.com/2026/07/psa.html" style="color: #1a73a8;">PSA 指數完整解析&#65288;攝護腺癌專站&#65289;</a></li><li style="margin: 6px 0px;"><a href="https://doctor-rirs.blogspot.com/2026/05/rirs.html" style="color: #1a73a8;">腎結石 RIRS 軟式輸尿管鏡完整解析&#65288;結石專站&#65289;</a></li></ul><h2 style="color: #2c3e50; font-size: 1.15em;">本文參考資料來自哪些權威指引&#65311;</h2><ol style="padding-left: 1.4em;"><li style="margin: 6px 0px;">歐洲泌尿科醫學會&#65288;EAU&#65289;&#65288;2025&#65289;&#12298;EAU Guidelines on Management of Non-neurogenic Male LUTS&#12299; <a href="https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts" style="color: #1a73a8; word-break: break-all;">https://uroweb.org/guidelines/management-of-non-neurogenic-male-luts</a></li><li style="margin: 6px 0px;">美國泌尿科醫學會&#65288;AUA&#65289;&#65288;2023&#65289;&#12298;Management of Benign Prostatic Hyperplasia/Lower Urinary Tract Symptoms Guideline&#12299; <a href="https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline" style="color: #1a73a8; word-break: break-all;">https://www.auanet.org/guidelines-and-quality/guidelines/benign-prostatic-hyperplasia-(bph)-guideline</a></li><li style="margin: 6px 0px;">英國國家健康與照護卓越研究院&#65288;NICE&#65289;&#65288;2015&#65289;&#12298;Lower urinary tract symptoms in men: management CG97&#12299; <a href="https://www.nice.org.uk/guidance/cg97" style="color: #1a73a8; word-break: break-all;">https://www.nice.org.uk/guidance/cg97</a></li><li style="margin: 6px 0px;">台灣泌尿科醫學會&#65288;2026&#65289;&#12298;學會官方網站衛教資源&#12299; <a href="http://www.tua.org.tw/" style="color: #1a73a8; word-break: break-all;">http://www.tua.org.tw/</a></li></ol><p style="color: #888888; font-size: 0.85em;font-size:max(var(--m15,0px),0.85em);">本文由黃建榮醫師&#65288;臺北醫學大學附設醫院 泌尿科&#65289;撰寫與審閱&#65292;最後更新&#65306;2026-09-08&#12290;內容僅供衛教參考&#65292;無法取代醫師當面診療&#12290;</p></div>
 </article>
 <a class="back" href="./">← 回文章列表</a>
 </div>

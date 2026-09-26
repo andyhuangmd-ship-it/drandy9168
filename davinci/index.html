@@ -173,8 +173,17 @@ body{background:#f3ece0;color:#1f2937}
 .tile-title{color:#1f3556}
 .tile .views{color:#8a6a1f}
 @media(max-width:1000px){.nav-cta{margin-left:auto}.nav{order:3;width:100%;margin-left:0;gap:4px 18px}}
-@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:2px}
+@media(max-width:680px){.topbar-in{padding:8px 14px}.brand-name{font-size:21px}.brand-sub{letter-spacing:1px;font-size:11px}
  .nav{display:none}.nav-cta{margin-left:auto;min-height:40px;padding:0 14px}.page_body{padding-top:16px}}
+/* ===== 手機版修正（老闆 2026-09-26）：只作用在手機，電腦版長相不變 =====
+   ① 小字下限：mobile_fonts() 把內文小於 15px 的字級包成 max(var(--m15,0px), 原值)，
+      電腦版沒有定義變數→等於原值；手機版→至少 15px（原本 ≤11px 的標籤類→至少 13px）
+   ② 內容不准比螢幕寬（表格除外，表格本來就在可左右滑的框裡）
+   ③ 影片框跟著螢幕寬 */
+@media(max-width:680px){
+ .post-body{--m15:15px;--m13:13px;overflow-x:clip}
+ .post-body :not(table):not(thead):not(tbody):not(tr):not(td):not(th){max-width:100%;box-sizing:border-box}
+ .post-body iframe{width:100%!important;height:auto!important;aspect-ratio:16/9}}
 
 .home{max-width:1000px;margin:0 auto;padding:0 15px;display:flex;flex-direction:column;gap:18px}
 .home .card{max-width:none;margin:0}
