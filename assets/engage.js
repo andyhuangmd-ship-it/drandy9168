@@ -28,11 +28,14 @@
   }
 
   // ---- 觀看數 ----
-  function showViews(map) {
+  // today：本日觀看數，只在有 data-today 的元素顯示（老闆 2026-09-27 指定的文章）
+  function showViews(map, today) {
     $$("[data-views]").forEach(function (el) {
-      var n = map[el.getAttribute("data-views")];
+      var s = el.getAttribute("data-views"), n = map[s];
       if (n === undefined) return;
-      el.textContent = (el.closest(".byline") ? "｜" : "") + fmt(n) + " 次觀看";
+      var txt = (el.closest(".byline") ? "｜" : "") + fmt(n) + " 次觀看";
+      if (el.hasAttribute("data-today") && today && today[s] !== undefined) txt += "｜本日 " + fmt(today[s]) + " 次";
+      el.textContent = txt;
       el.hidden = false;
     });
   }
@@ -43,15 +46,16 @@
     var req = (Date.now() - last > VIEW_GAP_MS)
       ? api("/views/" + encodeURIComponent(slug), { method: "POST" }).then(function (j) {
           store(key, String(Date.now()));
-          var m = {}; m[slug] = j.views; return m;
+          var m = {}, t = {}; m[slug] = j.views; t[slug] = j.today;
+          return { views: m, today: t };
         })
-      : api("/views?slugs=" + encodeURIComponent(slug)).then(function (j) { return j.views; });
-    req.then(showViews, function () {});
+      : api("/views?slugs=" + encodeURIComponent(slug));
+    req.then(function (j) { showViews(j.views || {}, j.today); }, function () {});
   } else {
     var slugs = $$("[data-views]").map(function (el) { return el.getAttribute("data-views"); });
     if (slugs.length) {
       api("/views?slugs=" + slugs.map(encodeURIComponent).join(",")).then(function (j) {
-        showViews(j.views || {});
+        showViews(j.views || {}, j.today);
       }, function () {});
     }
   }
