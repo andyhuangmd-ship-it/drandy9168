@@ -366,14 +366,22 @@ body{background:#f3ece0;color:#1f2937}
 .id-role{margin:12px 0 0;font:700 18px "Noto Serif TC",serif;letter-spacing:3px;color:#fff}
 .id-en{margin:4px 0 0;font:italic 400 13px Merriweather,serif;color:#d6b25e}
 .id-values{display:flex;margin:22px 0 0;padding:0;list-style:none}
-.id-values li{display:flex;flex-direction:column;align-items:center;gap:8px;padding:0 16px;color:#d6b25e;
- font:700 14px "Noto Serif TC",serif;letter-spacing:2px;border-left:1px solid rgba(214,178,94,.35)}
+.id-values li{display:flex;flex-direction:column;align-items:center;gap:10px;padding:0 22px;color:#d6b25e;
+ font:700 15px "Noto Serif TC",serif;letter-spacing:2px;border-left:1px solid rgba(214,178,94,.35)}
 .id-values li:first-child{padding-left:0;border-left:0}
-.id-values svg{width:42px;height:42px;padding:9px;box-sizing:border-box;border:1.5px solid #d6b25e;border-radius:50%;
+/* 圈圈 1.5 倍（老闆 2026-09-27：42px → 63px）*/
+.id-values svg{width:63px;height:63px;padding:14px;box-sizing:border-box;border:1.5px solid #d6b25e;border-radius:50%;
  fill:none;stroke:#d6b25e;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .id-photo{margin:0;display:block;background:#f4f4f2;border-radius:16px;overflow:hidden;
  box-shadow:0 10px 26px rgba(4,12,28,.35)}
 .id-photo img{display:block;width:100%;height:auto}
+/* 標語＋自我介紹（老闆 2026-09-27 三方會議定稿：標語 B、結尾老闆自訂、院名寫北醫）*/
+/* 老闆 2026-09-27 選「參考站版」：文案放左欄名字下方，與照片並排 */
+.id-intro{margin:22px 0 0;padding:18px 0 0;border-top:1px solid rgba(214,178,94,.35)}
+.id-slogan{margin:0;font:900 26px/1.5 "Noto Serif TC",serif;letter-spacing:2px;color:#fff}
+.id-slogan em{font-style:normal;color:#e3c77f}
+.id-bio{margin:12px 0 0;font:400 16px/1.85 "Noto Sans TC",sans-serif;color:#e6ebf3}
+.id-main>div:first-child{padding-top:0}
 .id-sec{display:flex;align-items:center;gap:10px;margin:26px 0 12px;color:#d6b25e;
  font:700 17px "Noto Serif TC",serif;letter-spacing:6px}
 .id-sec::after{content:"";flex:1;height:1px;background:rgba(214,178,94,.4)}
@@ -416,9 +424,11 @@ body{background:#f3ece0;color:#1f2937}
 <p class="id-tag">泌尿科專科醫師介紹</p></div>
 <div class="id-main"><div>
 <h1 id="h-name">黃建榮<small>醫師</small></h1>
-<p class="id-role">泌尿科主治醫師</p>
+<p class="id-role">泌尿科專科醫師</p>
 <p class="id-en">Urologist &amp; Robotic Surgeon</p>
 <ul class="id-values"><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="3"/><path d="M6 21v-5a6 6 0 0 1 12 0v5"/></svg>專業</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/></svg>精準</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>安心</li></ul>
+<div class="id-intro"><p class="id-slogan">攝護腺的問題，<br>交給<em>專看攝護腺</em>的醫師。</p>
+<p class="id-bio">我是北醫泌尿科主治醫師黃建榮。臨床 20 年，專注攝護腺肥大、攝護腺癌與腎結石，累積逾 2,000 例攝護腺雷射手術經驗。從診斷到手術，我都親自評估，用精準微創治療幫您解決排尿困擾，由我親自執刀，儘快重拾生活品質。</p></div>
 </div>
 <figure class="id-photo"><picture><source type="image/webp" srcset="/images/dr-huang-card-720.webp 720w, /images/dr-huang-card.webp 1036w" sizes="(max-width:680px) 60vw, 518px">
 <img src="/images/dr-huang-card.jpg" width="518" height="622" alt="臺北醫學大學附設醫院泌尿科主治醫師 黃建榮" fetchpriority="high"></picture></figure>
