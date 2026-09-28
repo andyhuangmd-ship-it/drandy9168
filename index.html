@@ -406,24 +406,25 @@ body{background:#f3ece0;color:#1f2937}
  border:1.5px solid #d6b25e;color:#e3c77f!important;font:700 15px Lato,sans-serif;text-decoration:none!important}
 /* ===== 醫師卡改淡藍（老闆 2026-09-28 選 3+「淡藍加深」）：白字改深藍、金色改深金 ===== */
 .idcard{background:linear-gradient(160deg,#dce9f6 0%,#bcd3ec 100%);color:#1f3556;box-shadow:0 10px 30px rgba(31,53,86,.10)}
-.idcard .cn{border-color:rgba(125,95,24,.40)}
+/* 老闆 2026-09-28 選 B：裝飾用最亮金 #d4a72c；文字用明亮金 #a67c00（最亮金在淡藍上對比約 1.8，小字看不清）*/
+.idcard .cn{border-color:#d4a72c;border-width:2px}
 .idcard .id-hosp,.idcard h1,.idcard .id-role,.idcard .id-slogan{color:#1f3556}
 .idcard .id-hosp-en{color:#4b5b73}
-.idcard .id-tag,.idcard .id-en,.idcard .id-sec,.idcard .id-values li,.idcard h1 small,.idcard .id-slogan em{color:#7d5f18}
-.idcard .id-tag::before,.idcard .id-tag::after{background:#7d5f18}
-.idcard .id-values li{border-left-color:rgba(125,95,24,.40)}
+.idcard .id-tag,.idcard .id-en,.idcard .id-sec,.idcard .id-values li,.idcard h1 small,.idcard .id-slogan em{color:#a67c00}
+.idcard .id-tag::before,.idcard .id-tag::after{background:#d4a72c}
+.idcard .id-values li{border-left-color:#d4a72c}
 .idcard .id-values li:first-child{border-left:0}
-.idcard .id-values svg{border-color:#7d5f18;stroke:#7d5f18}
-.idcard .id-intro{border-top-color:rgba(125,95,24,.40)}
+.idcard .id-values svg{border-color:#d4a72c;border-width:2px;stroke:#d4a72c}
+.idcard .id-intro{border-top-color:#d4a72c}
 .idcard .id-bio{color:#334155}
-.idcard .id-sec::after{background:rgba(125,95,24,.40)}
+.idcard .id-sec::after{background:#d4a72c}
 .idcard .id-photo{box-shadow:0 10px 24px rgba(31,53,86,.18)}
 .idcard .spec{background:rgba(255,255,255,.72);border-color:rgba(31,53,86,.14);color:#1f3556!important}
 .idcard .spec:hover{background:#fff}
-.idcard .spec .t{color:#1f3556}.idcard .spec .s{color:#4b5563}.idcard .spec .go{color:#7d5f18}
+.idcard .spec .t{color:#1f3556}.idcard .spec .s{color:#4b5563}.idcard .spec .go{color:#d4a72c}
 .idcard .id-facts{background:rgba(255,255,255,.6)}
-.idcard .id-facts li{color:#1f2937}.idcard .id-facts li::before{background:#7d5f18}
-.idcard .line-btn{border-color:#7d5f18;color:#7d5f18!important;background:rgba(255,255,255,.5)}
+.idcard .id-facts li{color:#1f2937}.idcard .id-facts li::before{background:#d4a72c}
+.idcard .line-btn{border-color:#d4a72c;border-width:2px;color:#a67c00!important;background:rgba(255,255,255,.5)}
 @media(max-width:680px){
  .idcard{padding:28px 18px 40px}.idcard .cn{width:28px;height:28px}
  .id-main{grid-template-columns:1fr 60%;gap:12px;padding-left:4px}.id-main>div:first-child{padding-top:24px}.id-photo{border-radius:12px}
