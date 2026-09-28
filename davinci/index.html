@@ -340,7 +340,14 @@ body{background:#f3ece0;color:#1f2937}
 .id-facts{margin:0;padding:14px 18px;list-style:none;background:rgba(255,255,255,.05);border-radius:8px}
 .id-facts li{position:relative;padding-left:16px;font:400 15px/28px Merriweather,serif;color:#eef2f8}
 .id-facts li::before{content:"";position:absolute;left:0;top:12px;width:5px;height:5px;border-radius:50%;background:#d6b25e}
-.id-cta{display:flex;gap:12px;margin-top:22px}
+.id-cta{display:flex;gap:12px;margin-top:22px;align-items:center}
+/* IG／Threads 圖示按鈕（老闆 2026-09-28：放掛號列右邊，圈圈加大到 60px）*/
+.soc{flex:0 0 60px;display:inline-flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;
+ background:#fff;border:2px solid #d4a72c;text-decoration:none!important;box-shadow:0 2px 8px rgba(31,53,86,.12);
+ transition:transform .15s,box-shadow .15s}
+.soc:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(31,53,86,.2)}
+.soc svg{width:29px;height:29px;fill:none;stroke:#1f3556;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.soc svg .dot{fill:#1f3556;stroke:none}
 .gold-bar{flex:1;display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:8px;
  background:linear-gradient(135deg,#ecd291,#b8913e);color:#0d2548!important;font:700 17px "Noto Serif TC",serif;
  letter-spacing:4px;text-decoration:none!important}
