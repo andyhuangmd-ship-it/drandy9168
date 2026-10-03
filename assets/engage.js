@@ -43,8 +43,11 @@
   var slug = document.body.getAttribute("data-slug");
   if (slug) {
     var key = "dv:" + slug, last = Number(store(key) || 0);
+    // 後台「參照網址」：只送來源網域，不送完整網址
+    var ref = "";
+    try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (e) {}
     var req = (Date.now() - last > VIEW_GAP_MS)
-      ? api("/views/" + encodeURIComponent(slug), { method: "POST" }).then(function (j) {
+      ? api("/views/" + encodeURIComponent(slug) + "?r=" + encodeURIComponent(ref), { method: "POST" }).then(function (j) {
           store(key, String(Date.now()));
           var m = {}, t = {}; m[slug] = j.views; t[slug] = j.today;
           return { views: m, today: t };
