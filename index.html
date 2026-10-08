@@ -258,9 +258,13 @@ body{background:#f3ece0;color:#1f2937}
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
 .facts li{padding:6px 12px;border:1px solid rgba(255,255,255,.35);color:#fff;font:700 14px Lato,sans-serif;line-height:20px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
-.hub-fig{margin:22px auto 0;max-width:320px;text-align:center}
-.hub-fig img{display:block;width:180px;height:auto;margin:0 auto;border-radius:10px}
+/* 示意圖靠左、掛號鈕在右（老闆 2026-10-08）*/
+.hub-cta-row{display:flex;flex-wrap:nowrap;align-items:flex-end;gap:32px;margin-top:22px}
+.hub-cta-row .cta{margin-top:0;flex-wrap:nowrap;flex-shrink:0}
+.hub-fig{margin:0;flex:0 1 auto}
+.hub-fig img{display:block;width:150px;height:auto;border-radius:10px}
 .hub-fig figcaption{margin-top:6px;font-size:13px;color:#8a7d70;line-height:1.4}
+.hub-fig+.cta{margin-bottom:24px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;
  font:700 16px Lato,sans-serif;color:#fff!important;text-decoration:none!important}
 .btn-main{background:#b85a3c}.btn-line{background:#047a38}
