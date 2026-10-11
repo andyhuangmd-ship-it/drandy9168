@@ -143,10 +143,23 @@
                              website: field("website").value, elapsed: Date.now() - shownAt })
     }).then(function (j) {
       field("body").value = "";
+      if (window.gtag) gtag("event", "submit_comment", { slug: slug });
       if (j.status === "published") { msg.textContent = "已張貼，謝謝您的留言！"; load(); }
       else { msg.textContent = "已收到，留言將在醫師審核後顯示。"; }
     }, function (e) {
       msg.textContent = e.status === 429 ? "留言太頻繁了，請稍後再試。" : "送出失敗：" + e.message;
     }).then(function () { btn.disabled = false; });
   });
+
+  // ---- GA4 事件：按掛號／LINE／電話（老闆 2026-10-11；在 GA4 把這三個標為重要事件）----
+  document.addEventListener("click", function (ev) {
+    if (!window.gtag) return;
+    var a = ev.target.closest ? ev.target.closest("a[href]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "", name = "";
+    if (/tmuh\.org\.tw\/service\/regist/.test(h)) name = "click_register";
+    else if (/line\.me\/R\/ti\/p\/@dr\.andy/.test(h)) name = "click_line";
+    else if (/^tel:/.test(h)) name = "click_phone";
+    if (name) gtag("event", name, { page_path: location.pathname, transport_type: "beacon" });
+  }, true);
 })();
