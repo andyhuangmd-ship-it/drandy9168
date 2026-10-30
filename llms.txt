@@ -68,6 +68,17 @@
 - [PSA 偏高、做完核磁共振，為什麼還是要切片？攝護腺切片診斷率解析](https://drandy9168.com/psa-mri-biopsy.html)
 - [核磁共振融合切片是什麼？攝護腺癌精準切片一次看懂](https://drandy9168.com/mri-fusion-biopsy.html)
 - [攝護腺癌新型荷爾蒙藥怎麼選？安可坦、安列康、諾博戈比較，二合一治療健保給付與自付額](https://drandy9168.com/arpi-adt-combo.html)
+- [末期攝護腺癌三合一療法是什麼？諾博戈＋化療＋荷爾蒙針，誰適合、健保給付與副作用](https://drandy9168.com/prostate-triple-therapy.html)
+- [鎦-177 PSMA 標靶放射治療是什麼？誰適合、效果、副作用與台灣取得方式](https://drandy9168.com/lu177-psma-therapy.html)
+- [攝護腺癌能活多久？各期 5 年存活率一次看懂](https://drandy9168.com/prostate-cancer-survival-rate.html)
+- [誰該提早檢查攝護腺癌？年齡、家族史、掛哪一科](https://drandy9168.com/prostate-cancer-early-screening.html)
+- [手術後 PSA 又升高？復發怎麼辦一次看懂](https://drandy9168.com/psa-recurrence-options.html)
+- [攝護腺癌手術要住幾天？請假多久？健保付哪些費用？](https://drandy9168.com/prostate-cancer-surgery-stay-nhi.html)
+- [達文西攝護腺癌手術後怎麼吃、怎麼過日子、怎麼保養？](https://drandy9168.com/rarp-after-surgery-diet-care.html)
+- [腎臟腫瘤幾公分要開刀？3、5、8 公分怎麼判斷](https://drandy9168.com/kidney-tumor-size-surgery.html)
+- [腎臟腫瘤一定是癌嗎？4 公分以下的實質腫瘤，約 2 成其實是良性](https://drandy9168.com/kidney-tumor-benign-or-cancer.html)
+- [膀胱癌一定要切除膀胱嗎？灌藥、經尿道切除與全切怎麼選](https://drandy9168.com/bladder-cancer-cystectomy.html)
+- [血尿要看哪一科？驗尿驗得出膀胱癌嗎？](https://drandy9168.com/blood-in-urine-which-department.html)
 
 ## 腎結石與輸尿管軟鏡
 - [腎結石免開刀！RIRS 軟式輸尿管鏡碎石手術完整解析](https://drandy9168.com/rirs-guide.html)
@@ -88,9 +99,8 @@
 - [洗腎有多麻煩，有結石不可輕忽](https://drandy9168.com/dialysis-kidney-stone.html)
 - [腎結石雷射碎石（RIRS）自費 13～16 萬，到底買了什麼？健保付哪些、哪些要自己出](https://drandy9168.com/rirs-self-pay-13-16.html)
 - [Kidney Stone Surgery in Taiwan: RIRS vs ESWL - Which One Fits You, and What It Costs](https://drandy9168.com/kidney-stone-surgery-taiwan.html)
+- [腎結石要看哪一科？痛到半夜、發燒、驗到血尿怎麼判斷？](https://drandy9168.com/kidney-stone-which-department.html)
+- [腎結石幾公分會自己排出來？5 mm 與 10 mm 是兩條關鍵分界線](https://drandy9168.com/kidney-stone-size-pass-by-itself.html)
 
 ## 站點地圖
 - https://drandy9168.com/sitemap.xml
-- [末期攝護腺癌三合一療法是什麼？諾博戈＋化療＋荷爾蒙針，誰適合、健保給付與副作用](https://drandy9168.com/prostate-triple-therapy.html)
-- [鎦-177 PSMA 標靶放射治療是什麼？誰適合、效果、副作用與台灣取得方式](https://drandy9168.com/lu177-psma-therapy.html)
-- [達文西攝護腺癌手術後怎麼吃、怎麼過日子、怎麼保養？](https://drandy9168.com/rarp-after-surgery-diet-care.html)
